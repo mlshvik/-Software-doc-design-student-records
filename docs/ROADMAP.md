@@ -1,0 +1,47 @@
+# План розробки
+
+Проєкт розробляється поетапно, кожен етап – окремий набір комітів.
+
+## Етап 1 – Аналіз і каркас ✅
+- [x] Аналіз предметної області, актори, функціональні та нефункціональні вимоги (`docs/01-domain-analysis.md`)
+- [x] Use Case діаграма (`docs/diagrams/use-case.*`)
+- [x] Каркас бекенду Spring Boot 3 (Maven, Java 17), `docker-compose.yml` з PostgreSQL
+
+## Етап 2 – Модель даних
+- [ ] JPA-сутності: Faculty, Specialty, StudyGroup, Student, Teacher, Subject, TeachingAssignment, Grade, AcademicDebt, ScheduleEntry, Notification, AppUser, SystemSetting
+- [ ] Перелічення: StudentStatus, ControlType, GradeAttempt, LessonType, WeekType, Role, DebtStatus
+- [ ] Міграції Flyway (`V1__init_schema.sql`, `V2__seed_data.sql`)
+- [ ] Діаграма класів системи з позначенням GoF-шаблонів (`docs/02-class-diagram.md`)
+
+## Етап 3 – Бізнес-логіка і шаблони проектування
+- [ ] Репозиторії Spring Data JPA
+- [ ] Singleton – `GradingScale` (100-бальна → національна → ЄКТС)
+- [ ] Strategy – `GpaCalculationStrategy` (`SimpleAverageStrategy`, `CreditWeightedStrategy`)
+- [ ] State – стани студента (`ActiveState`, `AcademicLeaveState`, `ExpelledState`, `GraduatedState`)
+- [ ] Chain of Responsibility – валідація оцінки (`ScoreRangeHandler` → `StudentActiveHandler` → `TeacherOwnsAssignmentHandler` → `AttemptLimitHandler`)
+- [ ] Observer – `GradeEventPublisher` + `AcademicDebtObserver`, `NotificationObserver`, `GpaRecalculationObserver`
+- [ ] Facade – `StudentRecordFacade` (оцінки + бал + борги + розклад)
+- [ ] Unit-тести шаблонів
+
+## Етап 4 – REST API, безпека, звіти
+- [ ] DTO, мапери, глобальна обробка помилок
+- [ ] Spring Security + JWT, ролі ADMIN / TEACHER / STUDENT
+- [ ] REST-контролери для всіх сутностей
+- [ ] Template Method – `AbstractReportGenerator`; Factory Method – `ReportGeneratorFactory`; Builder – `Report.Builder`
+- [ ] Звіти: успішність за групами та курсами, статистика по викладачах, академічні борги
+- [ ] Swagger UI
+
+## Етап 5 – Клієнтська частина (React)
+- [ ] Vite + React + TypeScript, маршрутизація, авторизація
+- [ ] Кабінет студента: оцінки, середній бал, борги, розклад, сповіщення
+- [ ] Кабінет викладача: мої дисципліни, відомість групи, виставлення оцінок і перескладань
+
+## Етап 6 – Адмін-частина
+- [ ] CRUD довідників, студентів, викладачів, предметів, призначень
+- [ ] Конструктор розкладу з перевіркою конфліктів
+- [ ] Сторінки звітів із графіками, налаштування системи
+
+## Етап 7 – Тести, розгортання, документація
+- [ ] Інтеграційні тести API
+- [ ] Dockerfile бекенду і фронтенду, запуск усього проєкту через `docker compose up`
+- [ ] Опис архітектури (`docs/03-architecture.md`), фінальний README

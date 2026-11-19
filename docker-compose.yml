@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: student-records-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-student_records}
+      POSTGRES_USER: ${POSTGRES_USER:-student_records}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-student_records}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-student_records}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  db-data:
