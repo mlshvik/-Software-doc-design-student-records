@@ -1,0 +1,74 @@
+@startuml use-case
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Гість" as Guest
+actor "Студент" as Student
+actor "Викладач" as Teacher
+actor "Адміністратор\n(деканат)" as Admin
+
+Student --|> Guest
+Teacher --|> Guest
+Admin --|> Guest
+
+rectangle "Система обліку студентів у ВНЗ" {
+  usecase "Увійти в систему" as UC_Login
+  usecase "Переглянути розклад групи" as UC_ViewSchedule
+
+  usecase "Переглянути свої оцінки" as UC_MyGrades
+  usecase "Переглянути середній бал" as UC_MyGpa
+  usecase "Переглянути академічні борги" as UC_MyDebts
+  usecase "Переглянути сповіщення" as UC_Notifications
+
+  usecase "Переглянути свої групи\nі дисципліни" as UC_MyAssignments
+  usecase "Виставити оцінку" as UC_PutGrade
+  usecase "Виставити перескладання" as UC_Retake
+  usecase "Перевірити оцінку\n(валідація)" as UC_Validate
+  usecase "Перерахувати\nсередній бал" as UC_RecalcGpa
+  usecase "Відкрити / закрити\nзаборгованість" as UC_Debt
+  usecase "Переглянути статистику\nвикладача" as UC_TeacherStats
+
+  usecase "Керувати факультетами,\nспеціальностями, групами" as UC_Dict
+  usecase "Керувати студентами" as UC_Students
+  usecase "Змінити статус студента" as UC_Status
+  usecase "Керувати викладачами\nі предметами" as UC_Teachers
+  usecase "Призначити викладача\nна дисципліну" as UC_Assign
+  usecase "Сформувати розклад" as UC_MakeSchedule
+  usecase "Перевірити конфлікти\nрозкладу" as UC_Conflicts
+  usecase "Сформувати звіт" as UC_Report
+  usecase "Успішність за групами\nта курсами" as UC_R1
+  usecase "Статистика\nпо викладачах" as UC_R2
+  usecase "Звіт про\nакадемічні борги" as UC_R3
+  usecase "Налаштувати систему\n(спосіб розрахунку балу)" as UC_Settings
+}
+
+Guest --> UC_Login
+Guest --> UC_ViewSchedule
+
+Student --> UC_MyGrades
+Student --> UC_MyGpa
+Student --> UC_MyDebts
+Student --> UC_Notifications
+
+Teacher --> UC_MyAssignments
+Teacher --> UC_PutGrade
+Teacher --> UC_TeacherStats
+UC_Retake .> UC_PutGrade : <<extend>>
+UC_PutGrade .> UC_Validate : <<include>>
+UC_PutGrade .> UC_RecalcGpa : <<include>>
+UC_PutGrade .> UC_Debt : <<include>>
+
+Admin --> UC_Dict
+Admin --> UC_Students
+Admin --> UC_Teachers
+Admin --> UC_Assign
+Admin --> UC_MakeSchedule
+Admin --> UC_Report
+Admin --> UC_Settings
+UC_Status .> UC_Students : <<extend>>
+UC_MakeSchedule .> UC_Conflicts : <<include>>
+UC_R1 --|> UC_Report
+UC_R2 --|> UC_Report
+UC_R3 --|> UC_Report
+@enduml
