@@ -10,6 +10,23 @@ jobs:
   backend:
     name: Backend (Maven build & tests)
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: student_records
+          POSTGRES_USER: student_records
+          POSTGRES_PASSWORD: student_records
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U student_records"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      CI_POSTGRES: "true"
+      DB_HOST: localhost
     defaults:
       run:
         working-directory: backend
@@ -20,5 +37,5 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
-      - name: Build and test
+      - name: Build and test (incl. Flyway migrations on PostgreSQL)
         run: mvn -B verify
