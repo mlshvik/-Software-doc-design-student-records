@@ -25,4 +25,6 @@ public interface StudentRepository extends JpaRepository<Student, Long>, JpaSpec
     boolean existsByRecordBookNumber(String recordBookNumber);
 
     long countByStatus(StudentStatus status);
+
+    boolean existsByRecordBookNumberAndIdNot(String recordBookNumber, Long id);
 }

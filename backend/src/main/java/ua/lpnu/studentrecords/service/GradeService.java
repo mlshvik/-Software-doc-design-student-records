@@ -13,12 +13,23 @@ import ua.lpnu.studentrecords.pattern.chain.GradeValidationChainBuilder;
 import ua.lpnu.studentrecords.pattern.chain.GradeValidationContext;
 import ua.lpnu.studentrecords.pattern.observer.GradeEventPublisher;
 import ua.lpnu.studentrecords.pattern.observer.GradeRecordedEvent;
+import ua.lpnu.studentrecords.pattern.scale.GradingScale;
+import ua.lpnu.studentrecords.pattern.strategy.FinalGradeSelector;
 import ua.lpnu.studentrecords.repository.GradeRepository;
 import ua.lpnu.studentrecords.repository.StudentRepository;
 import ua.lpnu.studentrecords.repository.TeacherRepository;
 import ua.lpnu.studentrecords.repository.TeachingAssignmentRepository;
+import ua.lpnu.studentrecords.web.dto.GradeRequest;
+import ua.lpnu.studentrecords.web.dto.GradeResponse;
+import ua.lpnu.studentrecords.web.dto.GradeSheetResponse;
+import ua.lpnu.studentrecords.web.dto.GradeSheetRow;
+import ua.lpnu.studentrecords.web.mapper.AcademicMapper;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -105,5 +116,57 @@ public class GradeService {
     public Optional<GradeAttempt> nextAttempt(Long studentId, Long assignmentId) {
         return AttemptLimitHandler.expectedAttempt(
                 gradeRepository.findByStudentIdAndAssignmentIdOrderByGradedAtAsc(studentId, assignmentId));
+    }
+
+    // ---- операції для REST API (результат – DTO, перетворення в межах транзакції) ----
+
+    /**
+     * Виставлення оцінки з REST API.
+     *
+     * @param teacherId викладач, що виставляє оцінку; {@code null} – адміністратор (оцінку
+     *                  буде записано від імені викладача дисципліни)
+     */
+    @Transactional
+    public GradeResponse record(GradeRequest request, Long teacherId) {
+        Grade grade = recordGrade(new RecordGradeCommand(request.studentId(), request.assignmentId(),
+                request.score(), request.attempt(), teacherId));
+        return AcademicMapper.toResponse(grade);
+    }
+
+    public List<GradeResponse> studentGrades(Long studentId) {
+        return getStudentGrades(studentId).stream().map(AcademicMapper::toResponse).toList();
+    }
+
+    /**
+     * Відомість групи з дисципліни: усі студенти групи, їхні спроби, підсумкова оцінка
+     * і наступна допустима спроба (визначається тим самим правилом, що й у ланцюжку валідації).
+     */
+    public GradeSheetResponse getGradeSheet(Long assignmentId) {
+        TeachingAssignment assignment = assignmentRepository.findById(assignmentId)
+                .orElseThrow(() -> new NotFoundException("Призначення", assignmentId));
+        Map<Long, List<Grade>> gradesByStudent = new LinkedHashMap<>();
+        gradeRepository.findByAssignmentId(assignmentId).stream()
+                .sorted(Comparator.comparing(Grade::getGradedAt))
+                .forEach(g -> gradesByStudent.computeIfAbsent(g.getStudent().getId(), id -> new ArrayList<>()).add(g));
+        List<GradeSheetRow> rows = new ArrayList<>();
+        for (Student student : studentRepository.findByGroupIdOrderByLastNameAscFirstNameAsc(
+                assignment.getGroup().getId())) {
+            List<Grade> grades = gradesByStudent.getOrDefault(student.getId(), List.of());
+            Grade finalGrade = FinalGradeSelector.selectFinal(grades).stream().findFirst().orElse(null);
+            GradeAttempt next = student.canBeGraded()
+                    ? AttemptLimitHandler.expectedAttempt(grades).orElse(null)
+                    : null;
+            rows.add(new GradeSheetRow(
+                    student.getId(),
+                    student.getFullName(),
+                    student.getRecordBookNumber(),
+                    student.getStatus(),
+                    student.canBeGraded(),
+                    grades.stream().map(AcademicMapper::toResponse).toList(),
+                    finalGrade == null ? null : finalGrade.getScore(),
+                    finalGrade == null ? null : GradingScale.INSTANCE.toEcts(finalGrade.getScore()),
+                    next));
+        }
+        return new GradeSheetResponse(AcademicMapper.toResponse(assignment), rows);
     }
 }
