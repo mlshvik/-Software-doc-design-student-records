@@ -26,13 +26,14 @@
 - [x] Unit-тести шаблонів (JUnit 5 + Mockito), тест контексту Spring на H2
 - [x] Опис реалізації шаблонів, діаграма послідовності і діаграма станів (`docs/design-patterns.md`)
 
-## Етап 4 – REST API, безпека, звіти
-- [ ] DTO, мапери, глобальна обробка помилок
-- [ ] Spring Security + JWT, ролі ADMIN / TEACHER / STUDENT
-- [ ] REST-контролери для всіх сутностей
-- [ ] Template Method – `AbstractReportGenerator`; Factory Method – `ReportGeneratorFactory`; Builder – `Report.Builder`
-- [ ] Звіти: успішність за групами та курсами, статистика по викладачах, академічні борги
-- [ ] Swagger UI
+## Етап 4 – REST API, безпека, звіти ✅
+- [x] DTO, мапери, глобальна обробка помилок (ProblemDetail, RFC 7807)
+- [x] Spring Security + JWT, ролі ADMIN / TEACHER / STUDENT, доступ лише до власних даних
+- [x] REST-контролери для всіх сутностей
+- [x] Template Method – `AbstractReportGenerator`; Factory Method – `ReportGeneratorFactory`; Builder – `Report.Builder`
+- [x] Звіти: успішність за групами та курсами, статистика по викладачах, академічні борги
+- [x] Swagger UI, опис API (`docs/04-rest-api.md`), діаграма послідовності формування звіту
+- [x] Тести: `@WebMvcTest`, `@SpringBootTest` (H2), JWT, шаблони звітів
 
 ## Етап 5 – Клієнтська частина (React)
 - [ ] Vite + React + TypeScript, маршрутизація, авторизація
