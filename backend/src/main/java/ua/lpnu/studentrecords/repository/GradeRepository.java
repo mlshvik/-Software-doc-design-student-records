@@ -27,4 +27,12 @@ public interface GradeRepository extends JpaRepository<Grade, Long> {
     @Query("select g from Grade g join fetch g.student s join fetch g.assignment a join fetch a.subject " +
            "where s.group.id = :groupId")
     List<Grade> findByGroupId(@Param("groupId") Long groupId);
+
+    /**
+     * Усі оцінки разом з даними для звітів (студент, дисципліна, викладач, група, спеціальність,
+     * факультет) одним SQL-запитом – без проблеми N+1.
+     */
+    @Query("select g from Grade g join fetch g.student s join fetch g.assignment a join fetch a.subject " +
+           "join fetch a.teacher join fetch a.group gr join fetch gr.specialty sp join fetch sp.faculty")
+    List<Grade> findAllForReports();
 }
