@@ -26,6 +26,18 @@ public abstract class BaseEntity {
         this.id = id;
     }
 
+    /**
+     * Чи представляють два об'єкти ту саму сутність: той самий екземпляр або однаковий
+     * ненульовий ідентифікатор. На відміну від {@link #equals(Object)}, не порівнює класи,
+     * тому коректно працює з лінивими проксі Hibernate.
+     */
+    public boolean isSameAs(BaseEntity other) {
+        if (other == null) return false;
+        if (this == other) return true;
+        Long thisId = getId();
+        return thisId != null && thisId.equals(other.getId());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
