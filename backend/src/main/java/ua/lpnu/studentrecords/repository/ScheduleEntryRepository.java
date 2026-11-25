@@ -19,7 +19,7 @@ public interface ScheduleEntryRepository extends JpaRepository<ScheduleEntry, Lo
     List<ScheduleEntry> findByTeacherId(@Param("teacherId") Long teacherId);
 
     /** Заняття в конкретну пару конкретного дня (для перевірки конфліктів розкладу). */
-    @Query("select e from ScheduleEntry e join fetch e.assignment a " +
-           "where e.dayOfWeek = :day and e.pairNumber = :pair")
+    @Query("select e from ScheduleEntry e join fetch e.assignment a join fetch a.subject " +
+           "join fetch a.teacher join fetch a.group where e.dayOfWeek = :day and e.pairNumber = :pair")
     List<ScheduleEntry> findAtTime(@Param("day") DayOfWeek day, @Param("pair") Integer pair);
 }
