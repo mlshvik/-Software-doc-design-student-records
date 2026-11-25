@@ -38,6 +38,14 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
+      - name: Resolve dependencies (retry if Maven Central throttles)
+        run: |
+          for attempt in 1 2 3 4; do
+            mvn -B -q dependency:go-offline && exit 0
+            echo "Attempt $attempt failed, retrying in $((attempt * 20)) s..."
+            sleep $((attempt * 20))
+          done
+          exit 1
       - name: Build and test (incl. Flyway migrations on PostgreSQL)
         run: mvn -B verify
       - name: Upload test reports
