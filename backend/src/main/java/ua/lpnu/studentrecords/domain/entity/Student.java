@@ -10,6 +10,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import ua.lpnu.studentrecords.domain.enums.StudentStatus;
+import ua.lpnu.studentrecords.pattern.state.StudentState;
+import ua.lpnu.studentrecords.pattern.state.StudentStateFactory;
 
 import java.time.LocalDate;
 
@@ -73,6 +75,29 @@ public class Student extends Person {
      * Бізнес-переходи між статусами виконуються через шаблон State.
      */
     public void setStatus(StudentStatus status) { this.status = status; }
+
+    /**
+     * Поточний стан студента (шаблон State, роль Context).
+     * Стан не зберігається окремо – він відновлюється зі статусу.
+     */
+    public StudentState getState() {
+        return StudentStateFactory.forStatus(status);
+    }
+
+    /**
+     * Зміна статусу студента. Рішення про допустимість переходу приймає поточний стан.
+     *
+     * @throws ua.lpnu.studentrecords.domain.exception.InvalidStatusTransitionException
+     *         якщо з поточного статусу не можна перейти в {@code target}
+     */
+    public void changeStatus(StudentStatus target) {
+        this.status = getState().transitionTo(target).status();
+    }
+
+    /** Чи можна виставляти студенту оцінки (делегується стану). */
+    public boolean canBeGraded() {
+        return getState().canBeGraded();
+    }
 
     public AppUser getUser() { return user; }
     public void setUser(AppUser user) { this.user = user; }
