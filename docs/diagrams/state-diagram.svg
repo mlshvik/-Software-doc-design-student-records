@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><marker id="arr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#333"/></marker></defs>
+<rect width="1000" height="640" fill="#ffffff"/>
+<text x="500.0" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#222">Діаграма станів студента (шаблон State)</text>
+<circle cx="36" cy="215" r="10" fill="#222"/>
+<path d="M46,215 L158,215" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="102" y="205" text-anchor="middle" font-size="12.5" fill="#1a237e">зарахування</text>
+<rect x="160" y="150" width="250" height="130" rx="16" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1.6"/>
+<text x="285.0" y="174" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Навчається</text>
+<text x="285.0" y="192" text-anchor="middle" font-size="11.5" font-style="italic" fill="#555">ACTIVE · ActiveState</text>
+<line x1="160" y1="202" x2="410" y2="202" stroke="#6a1b9a" stroke-width="1"/>
+<text x="172" y="222" font-size="12" fill="#222">✔ canBeGraded()</text>
+<text x="172" y="240" font-size="12" fill="#222">✔ canAttendClasses()</text>
+<rect x="690" y="70" width="270" height="130" rx="16" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1.6"/>
+<text x="825.0" y="94" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Академічна відпустка</text>
+<text x="825.0" y="112" text-anchor="middle" font-size="11.5" font-style="italic" fill="#555">ACADEMIC_LEAVE · AcademicLeaveState</text>
+<line x1="690" y1="122" x2="960" y2="122" stroke="#6a1b9a" stroke-width="1"/>
+<text x="702" y="142" font-size="12" fill="#222">✘ canBeGraded()</text>
+<text x="702" y="160" font-size="12" fill="#222">✘ canAttendClasses()</text>
+<rect x="690" y="350" width="270" height="130" rx="16" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1.6"/>
+<text x="825.0" y="374" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Відрахований</text>
+<text x="825.0" y="392" text-anchor="middle" font-size="11.5" font-style="italic" fill="#555">EXPELLED · ExpelledState</text>
+<line x1="690" y1="402" x2="960" y2="402" stroke="#6a1b9a" stroke-width="1"/>
+<text x="702" y="422" font-size="12" fill="#222">✘ canBeGraded()</text>
+<text x="702" y="440" font-size="12" fill="#222">✘ canAttendClasses()</text>
+<rect x="160" y="420" width="250" height="110" rx="16" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1.6"/>
+<text x="285.0" y="444" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Випускник</text>
+<text x="285.0" y="462" text-anchor="middle" font-size="11.5" font-style="italic" fill="#555">GRADUATED · GraduatedState</text>
+<line x1="160" y1="472" x2="410" y2="472" stroke="#6a1b9a" stroke-width="1"/>
+<text x="172" y="492" font-size="12" fill="#222">✘ canBeGraded()  (кінцевий стан)</text>
+<path d="M410,170 L688,110" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="549.0" y="132.0" text-anchor="middle" font-size="12.5" fill="#1a237e" transform="rotate(-12.2 549.0 140.0)">надати академвідпустку</text>
+<path d="M688,165 L410,228" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="549.0" y="214.5" text-anchor="middle" font-size="12.5" fill="#1a237e" transform="rotate(347.2 549.0 196.5)">повернення з відпустки</text>
+<path d="M410,258 L688,378" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="549.0" y="310.0" text-anchor="middle" font-size="12.5" fill="#1a237e" transform="rotate(23.3 549.0 318.0)">відрахувати</text>
+<path d="M688,440 L395,282" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="541.5" y="379.0" text-anchor="middle" font-size="12.5" fill="#1a237e" transform="rotate(28.3 541.5 361.0)">поновити</text>
+<path d="M825,200 L825,348" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="835" y="280" text-anchor="start" font-size="12.5" fill="#1a237e">відрахувати</text>
+<path d="M285,280 L285,418" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="295" y="355" text-anchor="start" font-size="12.5" fill="#1a237e">завершення навчання</text>
+<path d="M285,530 L285,575" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
+<circle cx="285" cy="590" r="13" fill="none" stroke="#222" stroke-width="2"/><circle cx="285" cy="590" r="8" fill="#222"/>
+<path d="M560,525 L954,525 L970,541 L970,620 L560,620 z" fill="#fff8e1" stroke="#b58900"/>
+<text x="572" y="547" font-size="12.5" fill="#333">Student.changeStatus(target) делегує рішення</text>
+<text x="572" y="566" font-size="12.5" fill="#333">поточному стану: state.transitionTo(target).</text>
+<text x="572" y="585" font-size="12.5" fill="#333">Перехід, якого немає на діаграмі (напр. Випускник →</text>
+<text x="572" y="604" font-size="12.5" fill="#333">Академвідпустка), → InvalidStatusTransitionException.</text>
+</svg>

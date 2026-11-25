@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1874" height="1110" viewBox="0 0 1874 1110" font-family="DejaVu Sans, Arial, sans-serif">
+<defs><marker id="f" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#333"/></marker><marker id="o" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#333"/></marker></defs>
+<rect width="1874" height="1110" fill="#fff"/>
+<text x="937.0" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#222">Діаграма послідовності: викладач виставляє оцінку</text>
+<rect x="20" y="525" width="1834" height="537" fill="none" stroke="#777" stroke-width="1.2"/>
+<path d="M20,525 L70,525 L70,539 L62,547 L20,547 z" fill="#eee" stroke="#777"/>
+<text x="30" y="541" font-size="13" font-weight="bold" fill="#333">alt</text>
+<text x="80" y="542" font-size="12.5" fill="#333">[правило порушено]</text>
+<line x1="20" y1="622" x2="1854" y2="622" stroke="#777" stroke-dasharray="7,5"/>
+<text x="30" y="639" font-size="12.5" fill="#333">[усі перевірки пройдено]</text>
+<line x1="95" y1="110" x2="95" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<circle cx="95" cy="66" r="8" fill="none" stroke="#333" stroke-width="1.5"/><path d="M95,74 L95,90 M83,80 L107,80 M95,90 L85,102 M95,90 L105,102" stroke="#333" stroke-width="1.5" fill="none"/>
+<text x="95" y="118" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#222">Викладач</text>
+<line x1="281" y1="110" x2="281" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="191.0" y="58" width="180" height="46" rx="4" fill="#f5f5f5" stroke="#555"/>
+<text x="281" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Сервіс»</text>
+<text x="281" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">GradeService</text>
+<line x1="467" y1="110" x2="467" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="377.0" y="58" width="180" height="46" rx="4" fill="#b2dfdb" stroke="#555"/>
+<text x="467" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Chain of Resp.»</text>
+<text x="467" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">GradeValidationHandler</text>
+<line x1="653" y1="110" x2="653" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="563.0" y="58" width="180" height="46" rx="4" fill="#e1bee7" stroke="#555"/>
+<text x="653" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«State: Context»</text>
+<text x="653" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">Student</text>
+<line x1="839" y1="110" x2="839" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="749.0" y="58" width="180" height="46" rx="4" fill="#eceff1" stroke="#555"/>
+<text x="839" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Spring Data»</text>
+<text x="839" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">GradeRepository</text>
+<line x1="1025" y1="110" x2="1025" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="935.0" y="58" width="180" height="46" rx="4" fill="#c8e6c9" stroke="#555"/>
+<text x="1025" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Observer: Subject»</text>
+<text x="1025" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">GradeEventPublisher</text>
+<line x1="1211" y1="110" x2="1211" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="1121.0" y="58" width="180" height="46" rx="4" fill="#c8e6c9" stroke="#555"/>
+<text x="1211" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Observer»</text>
+<text x="1211" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">AcademicDebtObserver</text>
+<line x1="1397" y1="110" x2="1397" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="1307.0" y="58" width="180" height="46" rx="4" fill="#c8e6c9" stroke="#555"/>
+<text x="1397" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Observer»</text>
+<text x="1397" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">NotificationObserver</text>
+<line x1="1583" y1="110" x2="1583" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="1493.0" y="58" width="180" height="46" rx="4" fill="#c8e6c9" stroke="#555"/>
+<text x="1583" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Observer»</text>
+<text x="1583" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">GpaRecalculationObserver</text>
+<line x1="1769" y1="110" x2="1769" y2="1080" stroke="#999" stroke-dasharray="6,5"/>
+<rect x="1679.0" y="58" width="180" height="46" rx="4" fill="#bbdefb" stroke="#555"/>
+<text x="1769" y="76" text-anchor="middle" font-size="10.5" font-style="italic" fill="#555">«Strategy: Context»</text>
+<text x="1769" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#222">GpaService</text>
+<rect x="275" y="140" width="12" height="905" fill="#fff" stroke="#555"/>
+<rect x="461" y="268" width="12" height="312" fill="#e0f2f1" stroke="#555"/>
+<rect x="647" y="352" width="12" height="48" fill="#f3e5f5" stroke="#555"/>
+<rect x="833" y="184" width="12" height="48" fill="#eceff1" stroke="#555"/>
+<rect x="833" y="662" width="12" height="26" fill="#eceff1" stroke="#555"/>
+<rect x="1019" y="700" width="12" height="212" fill="#e8f5e9" stroke="#555"/>
+<rect x="1205" y="742" width="12" height="58" fill="#e8f5e9" stroke="#555"/>
+<rect x="1391" y="826" width="12" height="58" fill="#e8f5e9" stroke="#555"/>
+<rect x="1577" y="910" width="12" height="60" fill="#e8f5e9" stroke="#555"/>
+<rect x="1763" y="952" width="12" height="42" fill="#e3f2fd" stroke="#555"/>
+<line x1="101" y1="150" x2="275" y2="150" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="130.4" y="132" width="115.2" height="16" fill="#fff" opacity="0.92"/>
+<text x="188.0" y="144" text-anchor="middle" font-size="11.5" fill="#1a237e">recordGrade(cmd)</text>
+<line x1="287" y1="192" x2="833" y2="192" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="385.15" y="174" width="349.7" height="16" fill="#fff" opacity="0.92"/>
+<text x="560.0" y="186" text-anchor="middle" font-size="11.5" fill="#1a237e">findByStudentIdAndAssignmentId…(): попередні спроби</text>
+<line x1="833" y1="228" x2="287" y2="228" stroke="#333" stroke-width="1.4" stroke-dasharray="7,4" marker-end="url(#o)"/>
+<rect x="489.0" y="210" width="142.0" height="16" fill="#fff" opacity="0.92"/>
+<text x="560.0" y="222" text-anchor="middle" font-size="11.5" fill="#1a237e">List&lt;Grade&gt; previous</text>
+<line x1="287" y1="272" x2="461" y2="272" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="306.35" y="254" width="135.3" height="16" fill="#fff" opacity="0.92"/>
+<text x="374.0" y="266" text-anchor="middle" font-size="11.5" fill="#1a237e">build().handle(ctx)</text>
+<path d="M473,300 L507,300 L507,318 L475,318" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="511" y="301" width="255.9" height="16" fill="#fff" opacity="0.92"/>
+<text x="515" y="313" text-anchor="start" font-size="11.5" fill="#1a237e">1. ScoreRangeHandler: 0 ≤ score ≤ 100</text>
+<line x1="473" y1="358" x2="647" y2="358" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="502.4" y="340" width="115.2" height="16" fill="#fff" opacity="0.92"/>
+<text x="560.0" y="352" text-anchor="middle" font-size="11.5" fill="#1a237e">2. canBeGraded()</text>
+<path d="M659,366 L693,366 L693,384 L661,384" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="697" y="367" width="322.90000000000003" height="16" fill="#fff" opacity="0.92"/>
+<text x="701" y="379" text-anchor="start" font-size="11.5" fill="#1a237e">StudentActiveHandler → getState().canBeGraded()</text>
+<line x1="647" y1="398" x2="473" y2="398" stroke="#333" stroke-width="1.4" stroke-dasharray="7,4" marker-end="url(#o)"/>
+<rect x="515.8" y="380" width="88.4" height="16" fill="#fff" opacity="0.92"/>
+<text x="560.0" y="392" text-anchor="middle" font-size="11.5" fill="#1a237e">true / false</text>
+<path d="M473,420 L507,420 L507,438 L475,438" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="511" y="421" width="215.70000000000002" height="16" fill="#fff" opacity="0.92"/>
+<text x="515" y="433" text-anchor="start" font-size="11.5" fill="#1a237e">3. TeacherOwnsAssignmentHandler</text>
+<path d="M473,462 L507,462 L507,480 L475,480" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="511" y="463" width="255.9" height="16" fill="#fff" opacity="0.92"/>
+<text x="515" y="475" text-anchor="start" font-size="11.5" fill="#1a237e">4. AttemptLimitHandler: порядок спроб</text>
+<line x1="461" y1="570" x2="287" y2="570" stroke="#333" stroke-width="1.4" stroke-dasharray="7,4" marker-end="url(#o)"/>
+<rect x="289.6" y="552" width="168.8" height="16" fill="#fff" opacity="0.92"/>
+<text x="374.0" y="564" text-anchor="middle" font-size="11.5" fill="#1a237e">GradeValidationException</text>
+<line x1="275" y1="600" x2="101" y2="600" stroke="#333" stroke-width="1.4" stroke-dasharray="7,4" marker-end="url(#o)"/>
+<rect x="147.15" y="582" width="81.7" height="16" fill="#fff" opacity="0.92"/>
+<text x="188.0" y="594" text-anchor="middle" font-size="11.5" fill="#1a237e">помилка 400</text>
+<line x1="287" y1="668" x2="833" y2="668" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="495.7" y="650" width="128.60000000000002" height="16" fill="#fff" opacity="0.92"/>
+<text x="560.0" y="662" text-anchor="middle" font-size="11.5" fill="#1a237e">save(new Grade(…))</text>
+<line x1="287" y1="706" x2="1019" y2="706" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="531.75" y="688" width="242.5" height="16" fill="#fff" opacity="0.92"/>
+<text x="653.0" y="700" text-anchor="middle" font-size="11.5" fill="#1a237e">notifyListeners(GradeRecordedEvent)</text>
+<line x1="1031" y1="748" x2="1205" y2="748" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1053.7" y="730" width="128.60000000000002" height="16" fill="#fff" opacity="0.92"/>
+<text x="1118.0" y="742" text-anchor="middle" font-size="11.5" fill="#1a237e">onGradeRecorded(e)</text>
+<path d="M1217,758 L1251,758 L1251,776 L1219,776" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1255" y="759" width="222.4" height="16" fill="#fff" opacity="0.92"/>
+<text x="1259" y="771" text-anchor="start" font-size="11.5" fill="#1a237e">DebtService.openDebt / closeDebt</text>
+<line x1="1031" y1="832" x2="1391" y2="832" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1146.7" y="814" width="128.60000000000002" height="16" fill="#fff" opacity="0.92"/>
+<text x="1211.0" y="826" text-anchor="middle" font-size="11.5" fill="#1a237e">onGradeRecorded(e)</text>
+<path d="M1403,842 L1437,842 L1437,860 L1405,860" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1441" y="843" width="202.3" height="16" fill="#fff" opacity="0.92"/>
+<text x="1445" y="855" text-anchor="start" font-size="11.5" fill="#1a237e">save(Notification) → студенту</text>
+<line x1="1031" y1="916" x2="1577" y2="916" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1239.7" y="898" width="128.60000000000002" height="16" fill="#fff" opacity="0.92"/>
+<text x="1304.0" y="910" text-anchor="middle" font-size="11.5" fill="#1a237e">onGradeRecorded(e)</text>
+<line x1="1589" y1="958" x2="1763" y2="958" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1598.3" y="940" width="155.4" height="16" fill="#fff" opacity="0.92"/>
+<text x="1676.0" y="952" text-anchor="middle" font-size="11.5" fill="#1a237e">recalculate(studentId)</text>
+<path d="M1775,968 L1809,968 L1809,986 L1777,986" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#f)"/>
+<rect x="1559.8" y="1004" width="249.20000000000002" height="16" fill="#fff" opacity="0.92"/>
+<text x="1809" y="1016" text-anchor="end" font-size="11.5" fill="#1a237e">resolver.resolve().calculate(grades)</text>
+<line x1="275" y1="1040" x2="101" y2="1040" stroke="#333" stroke-width="1.4" stroke-dasharray="7,4" marker-end="url(#o)"/>
+<rect x="167.25" y="1022" width="41.5" height="16" fill="#fff" opacity="0.92"/>
+<text x="188.0" y="1034" text-anchor="middle" font-size="11.5" fill="#1a237e">Grade</text>
+</svg>
