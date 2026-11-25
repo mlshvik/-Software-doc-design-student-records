@@ -15,14 +15,16 @@
 - [x] Діаграма класів системи з позначенням GoF-шаблонів і ER-діаграма (`docs/02-class-diagram.md`)
 - [x] Тести доменної моделі та перевірка міграцій на PostgreSQL у CI
 
-## Етап 3 – Бізнес-логіка і шаблони проектування
-- [ ] Singleton – `GradingScale` (100-бальна → національна → ЄКТС)
-- [ ] Strategy – `GpaCalculationStrategy` (`SimpleAverageStrategy`, `CreditWeightedStrategy`)
-- [ ] State – стани студента (`ActiveState`, `AcademicLeaveState`, `ExpelledState`, `GraduatedState`)
-- [ ] Chain of Responsibility – валідація оцінки (`ScoreRangeHandler` → `StudentActiveHandler` → `TeacherOwnsAssignmentHandler` → `AttemptLimitHandler`)
-- [ ] Observer – `GradeEventPublisher` + `AcademicDebtObserver`, `NotificationObserver`, `GpaRecalculationObserver`
-- [ ] Facade – `StudentRecordFacade` (оцінки + бал + борги + розклад)
-- [ ] Unit-тести шаблонів
+## Етап 3 – Бізнес-логіка і шаблони проектування ✅
+- [x] Singleton – `GradingScale` (100-бальна → національна → ЄКТС)
+- [x] Strategy – `GpaCalculationStrategy` (`SimpleAverageStrategy`, `CreditWeightedStrategy`)
+- [x] State – стани студента (`ActiveState`, `AcademicLeaveState`, `ExpelledState`, `GraduatedState`)
+- [x] Chain of Responsibility – валідація оцінки (`ScoreRangeHandler` → `StudentActiveHandler` → `TeacherOwnsAssignmentHandler` → `AttemptLimitHandler`)
+- [x] Observer – `GradeEventPublisher` + `AcademicDebtObserver`, `NotificationObserver`, `GpaRecalculationObserver`
+- [x] Facade – `StudentRecordFacade` (оцінки + бал + борги + розклад)
+- [x] Сервіси: `StudentService`, `GradeService`, `GpaService`, `DebtService`, `ScheduleService` з `ScheduleConflictChecker`
+- [x] Unit-тести шаблонів (JUnit 5 + Mockito), тест контексту Spring на H2
+- [x] Опис реалізації шаблонів, діаграма послідовності і діаграма станів (`docs/design-patterns.md`)
 
 ## Етап 4 – REST API, безпека, звіти
 - [ ] DTO, мапери, глобальна обробка помилок
