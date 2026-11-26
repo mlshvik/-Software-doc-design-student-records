@@ -7,14 +7,15 @@
 - [x] Use Case діаграма (`docs/diagrams/use-case.*`)
 - [x] Каркас бекенду Spring Boot 3 (Maven, Java 17), `docker-compose.yml` з PostgreSQL
 
-## Етап 2 – Модель даних
-- [ ] JPA-сутності: Faculty, Specialty, StudyGroup, Student, Teacher, Subject, TeachingAssignment, Grade, AcademicDebt, ScheduleEntry, Notification, AppUser, SystemSetting
-- [ ] Перелічення: StudentStatus, ControlType, GradeAttempt, LessonType, WeekType, Role, DebtStatus
-- [ ] Міграції Flyway (`V1__init_schema.sql`, `V2__seed_data.sql`)
-- [ ] Діаграма класів системи з позначенням GoF-шаблонів (`docs/02-class-diagram.md`)
+## Етап 2 – Модель даних ✅
+- [x] JPA-сутності: Faculty, Specialty, StudyGroup, Student, Teacher, Subject, TeachingAssignment, Grade, AcademicDebt, ScheduleEntry, Notification, AppUser, SystemSetting
+- [x] Перелічення: StudentStatus, ControlType, GradeAttempt, LessonType, WeekType, Role, DebtStatus
+- [x] Міграції Flyway (`V1__init_schema.sql`, `V2__seed_data.sql`)
+- [x] Репозиторії Spring Data JPA
+- [x] Діаграма класів системи з позначенням GoF-шаблонів і ER-діаграма (`docs/02-class-diagram.md`)
+- [x] Тести доменної моделі та перевірка міграцій на PostgreSQL у CI
 
 ## Етап 3 – Бізнес-логіка і шаблони проектування
-- [ ] Репозиторії Spring Data JPA
 - [ ] Singleton – `GradingScale` (100-бальна → національна → ЄКТС)
 - [ ] Strategy – `GpaCalculationStrategy` (`SimpleAverageStrategy`, `CreditWeightedStrategy`)
 - [ ] State – стани студента (`ActiveState`, `AcademicLeaveState`, `ExpelledState`, `GraduatedState`)

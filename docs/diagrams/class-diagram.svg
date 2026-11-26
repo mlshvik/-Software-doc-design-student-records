@@ -1,0 +1,516 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="2050" viewBox="0 0 2800 2050" font-family="DejaVu Sans">
+<defs>
+<marker id="tri" markerWidth="18" markerHeight="16" refX="17" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L17,8 L1,15 Z" fill="white" stroke="#263238" stroke-width="1.4"/></marker>
+<marker id="open" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L13,7 L1,13" fill="none" stroke="#263238" stroke-width="1.4"/></marker>
+<marker id="dia" markerWidth="22" markerHeight="14" refX="1" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,7 L11,1 L21,7 L11,13 Z" fill="#263238" stroke="#263238"/></marker>
+<marker id="odia" markerWidth="22" markerHeight="14" refX="1" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,7 L11,1 L21,7 L11,13 Z" fill="white" stroke="#263238" stroke-width="1.3"/></marker>
+<marker id="crow" markerWidth="22" markerHeight="22" refX="20" refY="11" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M4,11 L20,1 M4,11 L20,21 M4,11 L20,11" fill="none" stroke="#263238" stroke-width="1.5"/></marker>
+<marker id="one" markerWidth="20" markerHeight="20" refX="19" refY="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M12,1 L12,19 M6,1 L6,19" fill="none" stroke="#263238" stroke-width="1.4"/></marker>
+<marker id="zeroone" markerWidth="24" markerHeight="20" refX="23" refY="10" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><circle cx="8" cy="10" r="5" fill="white" stroke="#263238" stroke-width="1.3"/><path d="M18,1 L18,19" stroke="#263238" stroke-width="1.4"/></marker>
+</defs>
+<rect width="2800" height="2050" fill="white"/>
+<text x="1400.0" y="34" text-anchor="middle" font-size="24" font-weight="bold" fill="#263238">Діаграма класів системи обліку студентів у ВНЗ (з позначенням GoF-шаблонів)</text>
+<rect x="20" y="64" width="1450" height="1110" rx="10" fill="#607D8B" fill-opacity="0.18" stroke="#607D8B" stroke-width="1.5" stroke-dasharray="9,5"/><text x="32" y="86" font-size="15" font-weight="bold" fill="#37474F">Доменна модель (JPA-сутності)</text>
+<rect x="1560" y="64" width="1210" height="375" rx="10" fill="#1E88E5" fill-opacity="0.18" stroke="#1E88E5" stroke-width="1.5" stroke-dasharray="9,5"/><text x="1572" y="86" font-size="15" font-weight="bold" fill="#37474F">Strategy – розрахунок середнього балу   |   Singleton – шкала оцінювання</text>
+<rect x="1560" y="474" width="1210" height="440" rx="10" fill="#8E24AA" fill-opacity="0.18" stroke="#8E24AA" stroke-width="1.5" stroke-dasharray="9,5"/><text x="1572" y="496" font-size="15" font-weight="bold" fill="#37474F">State – статус студента</text>
+<rect x="20" y="1204" width="1440" height="750" rx="10" fill="#43A047" fill-opacity="0.18" stroke="#43A047" stroke-width="1.5" stroke-dasharray="9,5"/><text x="32" y="1226" font-size="15" font-weight="bold" fill="#37474F">Observer – реакція на нову оцінку   |   Chain of Responsibility – валідація оцінки</text>
+<rect x="1490" y="1204" width="1280" height="750" rx="10" fill="#F9A825" fill-opacity="0.18" stroke="#F9A825" stroke-width="1.5" stroke-dasharray="9,5"/><text x="1502" y="1226" font-size="15" font-weight="bold" fill="#37474F">Template Method + Factory Method + Builder – звіти   |   Facade – кабінет студента</text>
+<text x="40" y="2020" font-size="15" font-weight="bold">Легенда (кольори GoF-шаблонів):</text>
+<rect x="380" y="2005" width="22" height="18" fill="#F8BBD0" stroke="#37474F"/><text x="408" y="2020" font-size="13.5">Singleton</text>
+<rect x="508.7" y="2005" width="22" height="18" fill="#BBDEFB" stroke="#37474F"/><text x="536.7" y="2020" font-size="13.5">Strategy</text>
+<rect x="629.1" y="2005" width="22" height="18" fill="#E1BEE7" stroke="#37474F"/><text x="657.1" y="2020" font-size="13.5">State</text>
+<rect x="724.6" y="2005" width="22" height="18" fill="#B2DFDB" stroke="#37474F"/><text x="752.6" y="2020" font-size="13.5">Chain of Responsibility</text>
+<rect x="969.5" y="2005" width="22" height="18" fill="#C8E6C9" stroke="#37474F"/><text x="997.5" y="2020" font-size="13.5">Observer</text>
+<rect x="1089.9" y="2005" width="22" height="18" fill="#FFF59D" stroke="#37474F"/><text x="1117.9" y="2020" font-size="13.5">Template Method</text>
+<rect x="1268.4" y="2005" width="22" height="18" fill="#D7B899" stroke="#37474F"/><text x="1296.4" y="2020" font-size="13.5">Factory Method</text>
+<rect x="1438.6000000000001" y="2005" width="22" height="18" fill="#FFCC80" stroke="#37474F"/><text x="1466.6000000000001" y="2020" font-size="13.5">Builder</text>
+<rect x="1550.7" y="2005" width="22" height="18" fill="#B0BEC5" stroke="#37474F"/><text x="1578.7" y="2020" font-size="13.5">Facade</text>
+<rect x="1654.5" y="2005" width="22" height="18" fill="#FFFFFF" stroke="#37474F"/><text x="1682.5" y="2020" font-size="13.5">Сутність / перелічення</text>
+<polyline points="305,158 255,158" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="285" y="150" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="275" y="174" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="570,167 520,158" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="552" y="156" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="538" y="178" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="870,192 800,167" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="855" y="178" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="815" y="189" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="1140,192 1210,176" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="1162" y="203" text-anchor="middle" font-size="12" fill="#263238">0..1</text>
+<text x="1188" y="173" text-anchor="middle" font-size="12" fill="#263238">0..1</text>
+<polyline points="619,450 619,224" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="631" y="434" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="607" y="248" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="430,498 280,516" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="409" y="493" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="301" y="529" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="470,547 470,690 160,690 160,770" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="458" y="571" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="172" y="754" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="870,516 700,498" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="851" y="506" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="719" y="516" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="1005,450 1005,275" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="1017" y="434" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="993" y="299" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="565,770 565,547" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="577" y="754" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="553" y="571" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="870,814 780,814 780,528 700,528" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="850" y="806" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="720" y="544" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="1140,814 1175,814 1175,242 1140,242" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="1160" y="830" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="1160" y="258" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="1330,450 1330,241" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="1342" y="434" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<text x="1318" y="265" text-anchor="middle" font-size="12" fill="#263238">1</text>
+<polyline points="270,450 270,100 1330,100 1330,110" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="282" y="434" text-anchor="middle" font-size="12" fill="#263238">0..1</text>
+<text x="1342" y="94" text-anchor="middle" font-size="12" fill="#263238">0..1</text>
+<polyline points="40,561 30,561 30,1019 40,1019" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="1902,150 1960,150" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="1931" y="144" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">uses</text>
+<polyline points="2056,300 2056,245 2061,245 2061,190" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="2321,300 2321,245 2196,245 2196,190" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="1709,190 1736,300" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="1758" y="249" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">resolve()</text>
+<polyline points="1682,760 1682,715 2068,715 2068,634" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="1908,760 1908,715 2068,715 2068,634" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="2132,760 2132,715 2068,715 2068,634" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="2358,760 2358,715 2068,715 2068,634" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="2440,552 2237,577" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="2338" y="558" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">creates</text>
+<polyline points="2596,700 2594,583" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="2625" y="646" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">throws</text>
+<polyline points="340,1298 420,1307" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="380" y="1297" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">publish</text>
+<polyline points="720,1296 800,1282" fill="none" stroke="#263238" stroke-width="1.4" marker-start="url(#odia)"/>
+<text x="760" y="1283" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">listeners</text>
+<text x="778" y="1278" text-anchor="middle" font-size="12" fill="#263238">*</text>
+<polyline points="1090,1290 1170,1298" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1130" y="1288" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">receives</text>
+<polyline points="685,1480 685,1440 945,1440 945,1330" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="960,1480 960,1440 945,1440 945,1330" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="1235,1480 1235,1440 945,1440 945,1330" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#tri)"/>
+<polyline points="190,1347 190,1480" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="238" y="1418" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">build chain</text>
+<polyline points="190,1543 190,1680" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="232" y="1616" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">assembles</text>
+<polyline points="340,1700 375,1700 375,1658 270,1658" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#open)"/>
+<text x="375" y="1675" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">next</text>
+<polyline points="470,1652 420,1652 420,1752 340,1752" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="470,1730 420,1730 420,1752 340,1752" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="470,1808 420,1808 420,1752 340,1752" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="470,1886 420,1886 420,1752 340,1752" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="1820,1290 1870,1316" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1845" y="1297" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">creates</text>
+<polyline points="2200,1302 2280,1296" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="2240" y="1293" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">builds</text>
+<polyline points="2405,1465 2405,1364" fill="none" stroke="#263238" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="2435" y="1418" text-anchor="middle" font-size="11.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="4">build()</text>
+<polyline points="1662,1690 1662,1640 2035,1640 2035,1381" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="1981,1690 1981,1640 2035,1640 2035,1381" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="2290,1690 2290,1640 2035,1640 2035,1381" fill="none" stroke="#263238" stroke-width="1.4" marker-end="url(#tri)"/>
+<rect x="40" y="110" width="215" height="97" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="147.5" y="128" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="147.5" y="147" text-anchor="middle" font-size="14.5" font-weight="bold">Faculty</text>
+<line x1="40" y1="157" x2="255" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="174" font-size="12.5">- name: String</text>
+<text x="47" y="191" font-size="12.5">- shortName: String</text>
+<line x1="40" y1="199" x2="255" y2="199" stroke="#37474F" stroke-width="1.2"/>
+<rect x="305" y="110" width="215" height="97" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="412.5" y="128" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="412.5" y="147" text-anchor="middle" font-size="14.5" font-weight="bold">Specialty</text>
+<line x1="305" y1="157" x2="520" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<text x="312" y="174" font-size="12.5">- code: String</text>
+<text x="312" y="191" font-size="12.5">- name: String</text>
+<line x1="305" y1="199" x2="520" y2="199" stroke="#37474F" stroke-width="1.2"/>
+<rect x="570" y="110" width="230" height="114" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="685.0" y="128" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="685.0" y="147" text-anchor="middle" font-size="14.5" font-weight="bold">StudyGroup</text>
+<line x1="570" y1="157" x2="800" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<text x="577" y="174" font-size="12.5">- name: String</text>
+<text x="577" y="191" font-size="12.5">- course: Integer</text>
+<text x="577" y="208" font-size="12.5">- admissionYear: Integer</text>
+<line x1="570" y1="216" x2="800" y2="216" stroke="#37474F" stroke-width="1.2"/>
+<rect x="870" y="110" width="270" height="165" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1005.0" y="128" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="1005.0" y="147" text-anchor="middle" font-size="14.5" font-weight="bold">Student</text>
+<line x1="870" y1="157" x2="1140" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<text x="877" y="174" font-size="12.5">- recordBookNumber: String</text>
+<text x="877" y="191" font-size="12.5">- phone: String</text>
+<text x="877" y="208" font-size="12.5">- birthDate: LocalDate</text>
+<text x="877" y="225" font-size="12.5">- status: StudentStatus</text>
+<line x1="870" y1="233" x2="1140" y2="233" stroke="#37474F" stroke-width="1.2"/>
+<text x="877" y="250" font-size="12.5">+ getFullName(): String</text>
+<text x="877" y="267" font-size="12.5">+ changeStatus(StudentStatus)</text>
+<rect x="1210" y="110" width="240" height="131" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1330.0" y="128" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="1330.0" y="147" text-anchor="middle" font-size="14.5" font-weight="bold">AppUser</text>
+<line x1="1210" y1="157" x2="1450" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<text x="1217" y="174" font-size="12.5">- username: String</text>
+<text x="1217" y="191" font-size="12.5">- passwordHash: String</text>
+<text x="1217" y="208" font-size="12.5">- role: Role</text>
+<text x="1217" y="225" font-size="12.5">- enabled: boolean</text>
+<line x1="1210" y1="233" x2="1450" y2="233" stroke="#37474F" stroke-width="1.2"/>
+<rect x="40" y="450" width="240" height="131" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="160.0" y="468" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="160.0" y="487" text-anchor="middle" font-size="14.5" font-weight="bold">Teacher</text>
+<line x1="40" y1="497" x2="280" y2="497" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="514" font-size="12.5">- position: String</text>
+<text x="47" y="531" font-size="12.5">- academicDegree: String</text>
+<text x="47" y="548" font-size="12.5">- department: String</text>
+<line x1="40" y1="556" x2="280" y2="556" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="573" font-size="12.5">+ getFullName(): String</text>
+<rect x="430" y="450" width="270" height="97" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="565.0" y="468" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="565.0" y="487" text-anchor="middle" font-size="14.5" font-weight="bold">TeachingAssignment</text>
+<line x1="430" y1="497" x2="700" y2="497" stroke="#37474F" stroke-width="1.2"/>
+<text x="437" y="514" font-size="12.5">- semester: Integer</text>
+<text x="437" y="531" font-size="12.5">- academicYear: String</text>
+<line x1="430" y1="539" x2="700" y2="539" stroke="#37474F" stroke-width="1.2"/>
+<rect x="870" y="450" width="270" height="131" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1005.0" y="468" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="1005.0" y="487" text-anchor="middle" font-size="14.5" font-weight="bold">Grade</text>
+<line x1="870" y1="497" x2="1140" y2="497" stroke="#37474F" stroke-width="1.2"/>
+<text x="877" y="514" font-size="12.5">- score: Integer</text>
+<text x="877" y="531" font-size="12.5">- attempt: GradeAttempt</text>
+<text x="877" y="548" font-size="12.5">- gradedAt: LocalDateTime</text>
+<line x1="870" y1="556" x2="1140" y2="556" stroke="#37474F" stroke-width="1.2"/>
+<text x="877" y="573" font-size="12.5">+ isPassed(): boolean</text>
+<rect x="1210" y="450" width="240" height="131" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1330.0" y="468" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="1330.0" y="487" text-anchor="middle" font-size="14.5" font-weight="bold">Notification</text>
+<line x1="1210" y1="497" x2="1450" y2="497" stroke="#37474F" stroke-width="1.2"/>
+<text x="1217" y="514" font-size="12.5">- message: String</text>
+<text x="1217" y="531" font-size="12.5">- createdAt: LocalDateTime</text>
+<text x="1217" y="548" font-size="12.5">- read: boolean</text>
+<line x1="1210" y1="556" x2="1450" y2="556" stroke="#37474F" stroke-width="1.2"/>
+<text x="1217" y="573" font-size="12.5">+ markAsRead()</text>
+<rect x="40" y="770" width="240" height="131" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="160.0" y="788" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="160.0" y="807" text-anchor="middle" font-size="14.5" font-weight="bold">Subject</text>
+<line x1="40" y1="817" x2="280" y2="817" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="834" font-size="12.5">- name: String</text>
+<text x="47" y="851" font-size="12.5">- credits: BigDecimal</text>
+<text x="47" y="868" font-size="12.5">- hours: Integer</text>
+<text x="47" y="885" font-size="12.5">- controlType: ControlType</text>
+<line x1="40" y1="893" x2="280" y2="893" stroke="#37474F" stroke-width="1.2"/>
+<rect x="430" y="770" width="270" height="165" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="565.0" y="788" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="565.0" y="807" text-anchor="middle" font-size="14.5" font-weight="bold">ScheduleEntry</text>
+<line x1="430" y1="817" x2="700" y2="817" stroke="#37474F" stroke-width="1.2"/>
+<text x="437" y="834" font-size="12.5">- dayOfWeek: DayOfWeek</text>
+<text x="437" y="851" font-size="12.5">- pairNumber: Integer</text>
+<text x="437" y="868" font-size="12.5">- weekType: WeekType</text>
+<text x="437" y="885" font-size="12.5">- classroom: String</text>
+<text x="437" y="902" font-size="12.5">- lessonType: LessonType</text>
+<line x1="430" y1="910" x2="700" y2="910" stroke="#37474F" stroke-width="1.2"/>
+<text x="437" y="927" font-size="12.5">+ overlapsInTime(day, pair, week)</text>
+<rect x="870" y="770" width="270" height="148" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1005.0" y="788" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="1005.0" y="807" text-anchor="middle" font-size="14.5" font-weight="bold">AcademicDebt</text>
+<line x1="870" y1="817" x2="1140" y2="817" stroke="#37474F" stroke-width="1.2"/>
+<text x="877" y="834" font-size="12.5">- status: DebtStatus</text>
+<text x="877" y="851" font-size="12.5">- openedAt: LocalDateTime</text>
+<text x="877" y="868" font-size="12.5">- closedAt: LocalDateTime</text>
+<line x1="870" y1="876" x2="1140" y2="876" stroke="#37474F" stroke-width="1.2"/>
+<text x="877" y="893" font-size="12.5">+ close()</text>
+<text x="877" y="910" font-size="12.5">+ isOpen(): boolean</text>
+<rect x="1210" y="770" width="240" height="97" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1330.0" y="788" text-anchor="middle" font-size="12" font-style="italic">«entity»</text>
+<text x="1330.0" y="807" text-anchor="middle" font-size="14.5" font-weight="bold">SystemSetting</text>
+<line x1="1210" y1="817" x2="1450" y2="817" stroke="#37474F" stroke-width="1.2"/>
+<text x="1217" y="834" font-size="12.5">- key: String</text>
+<text x="1217" y="851" font-size="12.5">- value: String</text>
+<line x1="1210" y1="859" x2="1450" y2="859" stroke="#37474F" stroke-width="1.2"/>
+<rect x="40" y="980" width="271" height="131" fill="#FAFAFA" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="175.5" y="998" text-anchor="middle" font-size="12" font-style="italic">«abstract»</text>
+<text x="175.5" y="1017" text-anchor="middle" font-size="14.5" font-weight="bold" font-style="italic">Person</text>
+<line x1="40" y1="1027" x2="311" y2="1027" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1044" font-size="12.5">- lastName, firstName,</text>
+<text x="47" y="1061" font-size="12.5">  middleName, email: String</text>
+<text x="47" y="1078" font-size="12.5">(спільний предок Student і Teacher)</text>
+<line x1="40" y1="1086" x2="311" y2="1086" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1103" font-size="12.5">+ getFullName(): String</text>
+<rect x="330" y="1010" width="212" height="97" fill="#ECEFF1" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="436.0" y="1028" text-anchor="middle" font-size="12" font-style="italic">«enumeration»</text>
+<text x="436.0" y="1047" text-anchor="middle" font-size="14.5" font-weight="bold">StudentStatus</text>
+<line x1="330" y1="1057" x2="542" y2="1057" stroke="#37474F" stroke-width="1.2"/>
+<text x="337" y="1074" font-size="12.5">ACTIVE, ACADEMIC_LEAVE,</text>
+<text x="337" y="1091" font-size="12.5">EXPELLED, GRADUATED</text>
+<line x1="330" y1="1099" x2="542" y2="1099" stroke="#37474F" stroke-width="1.2"/>
+<rect x="556" y="1010" width="212" height="97" fill="#ECEFF1" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="662.0" y="1028" text-anchor="middle" font-size="12" font-style="italic">«enumeration»</text>
+<text x="662.0" y="1047" text-anchor="middle" font-size="14.5" font-weight="bold">GradeAttempt</text>
+<line x1="556" y1="1057" x2="768" y2="1057" stroke="#37474F" stroke-width="1.2"/>
+<text x="563" y="1074" font-size="12.5">REGULAR, RETAKE_TEACHER,</text>
+<text x="563" y="1091" font-size="12.5">RETAKE_COMMISSION</text>
+<line x1="556" y1="1099" x2="768" y2="1099" stroke="#37474F" stroke-width="1.2"/>
+<rect x="782" y="1010" width="212" height="97" fill="#ECEFF1" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="888.0" y="1028" text-anchor="middle" font-size="12" font-style="italic">«enumeration»</text>
+<text x="888.0" y="1047" text-anchor="middle" font-size="14.5" font-weight="bold">ControlType</text>
+<line x1="782" y1="1057" x2="994" y2="1057" stroke="#37474F" stroke-width="1.2"/>
+<text x="789" y="1074" font-size="12.5">EXAM, CREDIT,</text>
+<text x="789" y="1091" font-size="12.5">DIFF_CREDIT</text>
+<line x1="782" y1="1099" x2="994" y2="1099" stroke="#37474F" stroke-width="1.2"/>
+<rect x="1008" y="1010" width="213" height="97" fill="#ECEFF1" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1114.5" y="1028" text-anchor="middle" font-size="12" font-style="italic">«enumeration»</text>
+<text x="1114.5" y="1047" text-anchor="middle" font-size="14.5" font-weight="bold">WeekType / LessonType</text>
+<line x1="1008" y1="1057" x2="1221" y2="1057" stroke="#37474F" stroke-width="1.2"/>
+<text x="1015" y="1074" font-size="12.5">ALL, ODD, EVEN /</text>
+<text x="1015" y="1091" font-size="12.5">LECTURE, PRACTICE, LAB</text>
+<line x1="1008" y1="1099" x2="1221" y2="1099" stroke="#37474F" stroke-width="1.2"/>
+<rect x="1234" y="1010" width="212" height="97" fill="#ECEFF1" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1340.0" y="1028" text-anchor="middle" font-size="12" font-style="italic">«enumeration»</text>
+<text x="1340.0" y="1047" text-anchor="middle" font-size="14.5" font-weight="bold">Role / DebtStatus</text>
+<line x1="1234" y1="1057" x2="1446" y2="1057" stroke="#37474F" stroke-width="1.2"/>
+<text x="1241" y="1074" font-size="12.5">ADMIN, TEACHER, STUDENT /</text>
+<text x="1241" y="1091" font-size="12.5">OPEN, CLOSED</text>
+<line x1="1234" y1="1099" x2="1446" y2="1099" stroke="#37474F" stroke-width="1.2"/>
+<rect x="1580" y="110" width="322" height="80" fill="#BBDEFB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1741.0" y="130" text-anchor="middle" font-size="14.5" font-weight="bold">GpaService</text>
+<text x="1582" y="105" font-size="11" font-style="italic" fill="#455A64">Strategy: Context</text>
+<line x1="1580" y1="140" x2="1902" y2="140" stroke="#37474F" stroke-width="1.2"/>
+<text x="1587" y="157" font-size="12.5">- resolver: GpaCalculationStrategyResolver</text>
+<line x1="1580" y1="165" x2="1902" y2="165" stroke="#37474F" stroke-width="1.2"/>
+<text x="1587" y="182" font-size="12.5">+ calculateGpa(studentId): BigDecimal</text>
+<rect x="1960" y="110" width="337" height="80" fill="#BBDEFB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2128.5" y="128" text-anchor="middle" font-size="12" font-style="italic">«interface»</text>
+<text x="2128.5" y="147" text-anchor="middle" font-size="14.5" font-weight="bold" font-style="italic">GpaCalculationStrategy</text>
+<text x="1962" y="105" font-size="11" font-style="italic" fill="#455A64">Strategy</text>
+<line x1="1960" y1="157" x2="2297" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1960" y1="165" x2="2297" y2="165" stroke="#37474F" stroke-width="1.2"/>
+<text x="1967" y="182" font-size="12.5">+ calculate(grades: List&lt;Grade&gt;): BigDecimal</text>
+<rect x="1935" y="300" width="242" height="63" fill="#BBDEFB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2056.0" y="320" text-anchor="middle" font-size="14.5" font-weight="bold">SimpleAverageStrategy</text>
+<text x="1937" y="295" font-size="11" font-style="italic" fill="#455A64">ConcreteStrategy</text>
+<line x1="1935" y1="330" x2="2177" y2="330" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1935" y1="338" x2="2177" y2="338" stroke="#37474F" stroke-width="1.2"/>
+<text x="1942" y="355" font-size="12.5">+ calculate(grades): BigDecimal</text>
+<rect x="2200" y="300" width="242" height="63" fill="#BBDEFB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2321.0" y="320" text-anchor="middle" font-size="14.5" font-weight="bold">CreditWeightedStrategy</text>
+<text x="2202" y="295" font-size="11" font-style="italic" fill="#455A64">ConcreteStrategy</text>
+<line x1="2200" y1="330" x2="2442" y2="330" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2200" y1="338" x2="2442" y2="338" stroke="#37474F" stroke-width="1.2"/>
+<text x="2207" y="355" font-size="12.5">+ calculate(grades): BigDecimal</text>
+<rect x="1580" y="300" width="294" height="80" fill="#BBDEFB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1727.0" y="320" text-anchor="middle" font-size="14.5" font-weight="bold">GpaCalculationStrategyResolver</text>
+<line x1="1580" y1="330" x2="1874" y2="330" stroke="#37474F" stroke-width="1.2"/>
+<text x="1587" y="347" font-size="12.5">- strategies: Map</text>
+<line x1="1580" y1="355" x2="1874" y2="355" stroke="#37474F" stroke-width="1.2"/>
+<text x="1587" y="372" font-size="12.5">+ resolve(): Strategy</text>
+<rect x="2440" y="110" width="300" height="131" fill="#F8BBD0" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2590.0" y="128" text-anchor="middle" font-size="12" font-style="italic">«enum singleton»</text>
+<text x="2590.0" y="147" text-anchor="middle" font-size="14.5" font-weight="bold">GradingScale</text>
+<text x="2442" y="105" font-size="11" font-style="italic" fill="#455A64">Singleton</text>
+<line x1="2440" y1="157" x2="2740" y2="157" stroke="#37474F" stroke-width="1.2"/>
+<text x="2447" y="174" font-size="12.5">+ INSTANCE: GradingScale</text>
+<line x1="2440" y1="182" x2="2740" y2="182" stroke="#37474F" stroke-width="1.2"/>
+<text x="2447" y="199" font-size="12.5">+ toNational(score, type): String</text>
+<text x="2447" y="216" font-size="12.5">+ toEcts(score): String</text>
+<text x="2447" y="233" font-size="12.5">+ isPassing(score): boolean</text>
+<rect x="1900" y="520" width="337" height="114" fill="#E1BEE7" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2068.5" y="538" text-anchor="middle" font-size="12" font-style="italic">«interface»</text>
+<text x="2068.5" y="557" text-anchor="middle" font-size="14.5" font-weight="bold" font-style="italic">StudentState</text>
+<text x="1902" y="515" font-size="11" font-style="italic" fill="#455A64">State</text>
+<line x1="1900" y1="567" x2="2237" y2="567" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1900" y1="575" x2="2237" y2="575" stroke="#37474F" stroke-width="1.2"/>
+<text x="1907" y="592" font-size="12.5">+ canBeGraded(): boolean</text>
+<text x="1907" y="609" font-size="12.5">+ canAttendClasses(): boolean</text>
+<text x="1907" y="626" font-size="12.5">+ transitionTo(StudentStatus): StudentStatus</text>
+<rect x="2440" y="520" width="308" height="63" fill="#E1BEE7" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2594.0" y="540" text-anchor="middle" font-size="14.5" font-weight="bold">StudentStateFactory</text>
+<text x="2442" y="515" font-size="11" font-style="italic" fill="#455A64">State: фабрика станів</text>
+<line x1="2440" y1="550" x2="2748" y2="550" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2440" y1="558" x2="2748" y2="558" stroke="#37474F" stroke-width="1.2"/>
+<text x="2447" y="575" font-size="12.5">+ forStatus(StudentStatus): StudentState</text>
+<rect x="1580" y="760" width="205" height="80" fill="#E1BEE7" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1682.5" y="780" text-anchor="middle" font-size="14.5" font-weight="bold">ActiveState</text>
+<text x="1582" y="755" font-size="11" font-style="italic" fill="#455A64">ConcreteState</text>
+<line x1="1580" y1="790" x2="1785" y2="790" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1580" y1="798" x2="1785" y2="798" stroke="#37474F" stroke-width="1.2"/>
+<text x="1587" y="815" font-size="12.5">+ canBeGraded()</text>
+<text x="1587" y="832" font-size="12.5">+ transitionTo(..)</text>
+<rect x="1805" y="760" width="205" height="80" fill="#E1BEE7" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1907.5" y="780" text-anchor="middle" font-size="14.5" font-weight="bold">AcademicLeaveState</text>
+<text x="1807" y="755" font-size="11" font-style="italic" fill="#455A64">ConcreteState</text>
+<line x1="1805" y1="790" x2="2010" y2="790" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1805" y1="798" x2="2010" y2="798" stroke="#37474F" stroke-width="1.2"/>
+<text x="1812" y="815" font-size="12.5">+ canBeGraded()</text>
+<text x="1812" y="832" font-size="12.5">+ transitionTo(..)</text>
+<rect x="2030" y="760" width="205" height="80" fill="#E1BEE7" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2132.5" y="780" text-anchor="middle" font-size="14.5" font-weight="bold">ExpelledState</text>
+<text x="2032" y="755" font-size="11" font-style="italic" fill="#455A64">ConcreteState</text>
+<line x1="2030" y1="790" x2="2235" y2="790" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2030" y1="798" x2="2235" y2="798" stroke="#37474F" stroke-width="1.2"/>
+<text x="2037" y="815" font-size="12.5">+ canBeGraded()</text>
+<text x="2037" y="832" font-size="12.5">+ transitionTo(..)</text>
+<rect x="2255" y="760" width="205" height="80" fill="#E1BEE7" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2357.5" y="780" text-anchor="middle" font-size="14.5" font-weight="bold">GraduatedState</text>
+<text x="2257" y="755" font-size="11" font-style="italic" fill="#455A64">ConcreteState</text>
+<line x1="2255" y1="790" x2="2460" y2="790" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2255" y1="798" x2="2460" y2="798" stroke="#37474F" stroke-width="1.2"/>
+<text x="2262" y="815" font-size="12.5">+ canBeGraded()</text>
+<text x="2262" y="832" font-size="12.5">+ transitionTo(..)</text>
+<rect x="2440" y="700" width="312" height="63" fill="#FFEBEE" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2596.0" y="718" text-anchor="middle" font-size="12" font-style="italic">«exception»</text>
+<text x="2596.0" y="737" text-anchor="middle" font-size="14.5" font-weight="bold">InvalidStatusTransitionException</text>
+<line x1="2440" y1="747" x2="2752" y2="747" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2440" y1="755" x2="2752" y2="755" stroke="#37474F" stroke-width="1.2"/>
+<rect x="40" y="1250" width="300" height="97" fill="#F5F5F5" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="190.0" y="1270" text-anchor="middle" font-size="14.5" font-weight="bold">GradeService</text>
+<text x="42" y="1245" font-size="11" font-style="italic" fill="#455A64">Client</text>
+<line x1="40" y1="1280" x2="340" y2="1280" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1297" font-size="12.5">- chain: GradeValidationHandler</text>
+<text x="47" y="1314" font-size="12.5">- publisher: GradeEventPublisher</text>
+<line x1="40" y1="1322" x2="340" y2="1322" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1339" font-size="12.5">+ recordGrade(cmd): Grade</text>
+<rect x="420" y="1250" width="300" height="114" fill="#C8E6C9" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="570.0" y="1270" text-anchor="middle" font-size="14.5" font-weight="bold">GradeEventPublisher</text>
+<text x="422" y="1245" font-size="11" font-style="italic" fill="#455A64">Observer: Subject</text>
+<line x1="420" y1="1280" x2="720" y2="1280" stroke="#37474F" stroke-width="1.2"/>
+<text x="427" y="1297" font-size="12.5">- listeners: List&lt;GradeEventListener&gt;</text>
+<line x1="420" y1="1305" x2="720" y2="1305" stroke="#37474F" stroke-width="1.2"/>
+<text x="427" y="1322" font-size="12.5">+ subscribe(l)</text>
+<text x="427" y="1339" font-size="12.5">+ unsubscribe(l)</text>
+<text x="427" y="1356" font-size="12.5">+ notifyListeners(event)</text>
+<rect x="800" y="1250" width="290" height="80" fill="#C8E6C9" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="945.0" y="1268" text-anchor="middle" font-size="12" font-style="italic">«interface»</text>
+<text x="945.0" y="1287" text-anchor="middle" font-size="14.5" font-weight="bold" font-style="italic">GradeEventListener</text>
+<text x="802" y="1245" font-size="11" font-style="italic" fill="#455A64">Observer</text>
+<line x1="800" y1="1297" x2="1090" y2="1297" stroke="#37474F" stroke-width="1.2"/>
+<line x1="800" y1="1305" x2="1090" y2="1305" stroke="#37474F" stroke-width="1.2"/>
+<text x="807" y="1322" font-size="12.5">+ onGradeRecorded(GradeRecordedEvent)</text>
+<rect x="1170" y="1250" width="250" height="97" fill="#C8E6C9" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1295.0" y="1268" text-anchor="middle" font-size="12" font-style="italic">«record»</text>
+<text x="1295.0" y="1287" text-anchor="middle" font-size="14.5" font-weight="bold">GradeRecordedEvent</text>
+<line x1="1170" y1="1297" x2="1420" y2="1297" stroke="#37474F" stroke-width="1.2"/>
+<text x="1177" y="1314" font-size="12.5">- grade: Grade</text>
+<text x="1177" y="1331" font-size="12.5">- student: Student</text>
+<line x1="1170" y1="1339" x2="1420" y2="1339" stroke="#37474F" stroke-width="1.2"/>
+<rect x="560" y="1480" width="250" height="63" fill="#C8E6C9" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="685.0" y="1500" text-anchor="middle" font-size="14.5" font-weight="bold">AcademicDebtObserver</text>
+<text x="562" y="1475" font-size="11" font-style="italic" fill="#455A64">ConcreteObserver</text>
+<line x1="560" y1="1510" x2="810" y2="1510" stroke="#37474F" stroke-width="1.2"/>
+<line x1="560" y1="1518" x2="810" y2="1518" stroke="#37474F" stroke-width="1.2"/>
+<text x="567" y="1535" font-size="12.5">+ onGradeRecorded(event)</text>
+<rect x="835" y="1480" width="250" height="63" fill="#C8E6C9" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="960.0" y="1500" text-anchor="middle" font-size="14.5" font-weight="bold">NotificationObserver</text>
+<text x="837" y="1475" font-size="11" font-style="italic" fill="#455A64">ConcreteObserver</text>
+<line x1="835" y1="1510" x2="1085" y2="1510" stroke="#37474F" stroke-width="1.2"/>
+<line x1="835" y1="1518" x2="1085" y2="1518" stroke="#37474F" stroke-width="1.2"/>
+<text x="842" y="1535" font-size="12.5">+ onGradeRecorded(event)</text>
+<rect x="1110" y="1480" width="250" height="63" fill="#C8E6C9" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1235.0" y="1500" text-anchor="middle" font-size="14.5" font-weight="bold">GpaRecalculationObserver</text>
+<text x="1112" y="1475" font-size="11" font-style="italic" fill="#455A64">ConcreteObserver</text>
+<line x1="1110" y1="1510" x2="1360" y2="1510" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1110" y1="1518" x2="1360" y2="1518" stroke="#37474F" stroke-width="1.2"/>
+<text x="1117" y="1535" font-size="12.5">+ onGradeRecorded(event)</text>
+<rect x="40" y="1480" width="300" height="63" fill="#B2DFDB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="190.0" y="1500" text-anchor="middle" font-size="14.5" font-weight="bold">GradeValidationChainBuilder</text>
+<text x="42" y="1475" font-size="11" font-style="italic" fill="#455A64">Chain: збирач</text>
+<line x1="40" y1="1510" x2="340" y2="1510" stroke="#37474F" stroke-width="1.2"/>
+<line x1="40" y1="1518" x2="340" y2="1518" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1535" font-size="12.5">+ build(): GradeValidationHandler</text>
+<rect x="40" y="1680" width="300" height="131" fill="#B2DFDB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="190.0" y="1698" text-anchor="middle" font-size="12" font-style="italic">«abstract»</text>
+<text x="190.0" y="1717" text-anchor="middle" font-size="14.5" font-weight="bold" font-style="italic">GradeValidationHandler</text>
+<text x="42" y="1675" font-size="11" font-style="italic" fill="#455A64">Handler</text>
+<line x1="40" y1="1727" x2="340" y2="1727" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1744" font-size="12.5">- next: GradeValidationHandler</text>
+<line x1="40" y1="1752" x2="340" y2="1752" stroke="#37474F" stroke-width="1.2"/>
+<text x="47" y="1769" font-size="12.5">+ setNext(h): GradeValidationHandler</text>
+<text x="47" y="1786" font-size="12.5">+ handle(cmd)</text>
+<text x="47" y="1803" font-size="12.5" font-style="italic"># check(cmd)</text>
+<rect x="470" y="1620" width="290" height="63" fill="#B2DFDB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="615.0" y="1640" text-anchor="middle" font-size="14.5" font-weight="bold">ScoreRangeHandler</text>
+<text x="472" y="1615" font-size="11" font-style="italic" fill="#455A64">ConcreteHandler</text>
+<line x1="470" y1="1650" x2="760" y2="1650" stroke="#37474F" stroke-width="1.2"/>
+<line x1="470" y1="1658" x2="760" y2="1658" stroke="#37474F" stroke-width="1.2"/>
+<text x="477" y="1675" font-size="12.5"># check(cmd)</text>
+<rect x="470" y="1698" width="290" height="63" fill="#B2DFDB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="615.0" y="1718" text-anchor="middle" font-size="14.5" font-weight="bold">StudentActiveHandler</text>
+<text x="472" y="1693" font-size="11" font-style="italic" fill="#455A64">ConcreteHandler</text>
+<line x1="470" y1="1728" x2="760" y2="1728" stroke="#37474F" stroke-width="1.2"/>
+<line x1="470" y1="1736" x2="760" y2="1736" stroke="#37474F" stroke-width="1.2"/>
+<text x="477" y="1753" font-size="12.5"># check(cmd)</text>
+<rect x="470" y="1776" width="290" height="63" fill="#B2DFDB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="615.0" y="1796" text-anchor="middle" font-size="14.5" font-weight="bold">TeacherOwnsAssignmentHandler</text>
+<text x="472" y="1771" font-size="11" font-style="italic" fill="#455A64">ConcreteHandler</text>
+<line x1="470" y1="1806" x2="760" y2="1806" stroke="#37474F" stroke-width="1.2"/>
+<line x1="470" y1="1814" x2="760" y2="1814" stroke="#37474F" stroke-width="1.2"/>
+<text x="477" y="1831" font-size="12.5"># check(cmd)</text>
+<rect x="470" y="1854" width="290" height="63" fill="#B2DFDB" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="615.0" y="1874" text-anchor="middle" font-size="14.5" font-weight="bold">AttemptLimitHandler</text>
+<text x="472" y="1849" font-size="11" font-style="italic" fill="#455A64">ConcreteHandler</text>
+<line x1="470" y1="1884" x2="760" y2="1884" stroke="#37474F" stroke-width="1.2"/>
+<line x1="470" y1="1892" x2="760" y2="1892" stroke="#37474F" stroke-width="1.2"/>
+<text x="477" y="1909" font-size="12.5"># check(cmd)</text>
+<rect x="1520" y="1250" width="300" height="80" fill="#D7B899" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1670.0" y="1270" text-anchor="middle" font-size="14.5" font-weight="bold">ReportGeneratorFactory</text>
+<text x="1522" y="1245" font-size="11" font-style="italic" fill="#455A64">Factory Method</text>
+<line x1="1520" y1="1280" x2="1820" y2="1280" stroke="#37474F" stroke-width="1.2"/>
+<text x="1527" y="1297" font-size="12.5">- generators: Map&lt;ReportType, ..&gt;</text>
+<line x1="1520" y1="1305" x2="1820" y2="1305" stroke="#37474F" stroke-width="1.2"/>
+<text x="1527" y="1322" font-size="12.5">+ create(type): AbstractReportGenerator</text>
+<rect x="1870" y="1250" width="330" height="131" fill="#FFF59D" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2035.0" y="1268" text-anchor="middle" font-size="12" font-style="italic">«abstract»</text>
+<text x="2035.0" y="1287" text-anchor="middle" font-size="14.5" font-weight="bold" font-style="italic">AbstractReportGenerator&lt;D&gt;</text>
+<text x="1872" y="1245" font-size="11" font-style="italic" fill="#455A64">Template Method</text>
+<line x1="1870" y1="1297" x2="2200" y2="1297" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1870" y1="1305" x2="2200" y2="1305" stroke="#37474F" stroke-width="1.2"/>
+<text x="1877" y="1322" font-size="12.5">+ generate(req): Report  {final}</text>
+<text x="1877" y="1339" font-size="12.5" font-style="italic"># loadData(req): D</text>
+<text x="1877" y="1356" font-size="12.5" font-style="italic"># aggregate(data): List&lt;Row&gt;</text>
+<text x="1877" y="1373" font-size="12.5"># build(rows): Report</text>
+<rect x="2280" y="1250" width="250" height="114" fill="#FFCC80" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2405.0" y="1270" text-anchor="middle" font-size="14.5" font-weight="bold">Report</text>
+<text x="2282" y="1245" font-size="11" font-style="italic" fill="#455A64">Product</text>
+<line x1="2280" y1="1280" x2="2530" y2="1280" stroke="#37474F" stroke-width="1.2"/>
+<text x="2287" y="1297" font-size="12.5">- title: String</text>
+<text x="2287" y="1314" font-size="12.5">- generatedAt</text>
+<text x="2287" y="1331" font-size="12.5">- columns, rows, summary</text>
+<line x1="2280" y1="1339" x2="2530" y2="1339" stroke="#37474F" stroke-width="1.2"/>
+<text x="2287" y="1356" font-size="12.5">+ builder(): Builder</text>
+<rect x="2280" y="1465" width="250" height="131" fill="#FFCC80" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2405.0" y="1485" text-anchor="middle" font-size="14.5" font-weight="bold">Report.Builder</text>
+<text x="2282" y="1460" font-size="11" font-style="italic" fill="#455A64">Builder</text>
+<line x1="2280" y1="1495" x2="2530" y2="1495" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2280" y1="1503" x2="2530" y2="1503" stroke="#37474F" stroke-width="1.2"/>
+<text x="2287" y="1520" font-size="12.5">+ title(..): Builder</text>
+<text x="2287" y="1537" font-size="12.5">+ column(..): Builder</text>
+<text x="2287" y="1554" font-size="12.5">+ row(..): Builder</text>
+<text x="2287" y="1571" font-size="12.5">+ summary(..): Builder</text>
+<text x="2287" y="1588" font-size="12.5">+ build(): Report</text>
+<rect x="1510" y="1690" width="303" height="80" fill="#FFF59D" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1661.5" y="1710" text-anchor="middle" font-size="14.5" font-weight="bold">GroupPerformanceReportGenerator</text>
+<text x="1512" y="1685" font-size="11" font-style="italic" fill="#455A64">ConcreteClass</text>
+<line x1="1510" y1="1720" x2="1813" y2="1720" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1510" y1="1728" x2="1813" y2="1728" stroke="#37474F" stroke-width="1.2"/>
+<text x="1517" y="1745" font-size="12.5"># loadData(req)</text>
+<text x="1517" y="1762" font-size="12.5"># aggregate(data)</text>
+<rect x="1825" y="1690" width="312" height="80" fill="#FFF59D" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="1981.0" y="1710" text-anchor="middle" font-size="14.5" font-weight="bold">TeacherStatisticsReportGenerator</text>
+<text x="1827" y="1685" font-size="11" font-style="italic" fill="#455A64">ConcreteClass</text>
+<line x1="1825" y1="1720" x2="2137" y2="1720" stroke="#37474F" stroke-width="1.2"/>
+<line x1="1825" y1="1728" x2="2137" y2="1728" stroke="#37474F" stroke-width="1.2"/>
+<text x="1832" y="1745" font-size="12.5"># loadData(req)</text>
+<text x="1832" y="1762" font-size="12.5"># aggregate(data)</text>
+<rect x="2140" y="1690" width="300" height="80" fill="#FFF59D" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2290.0" y="1710" text-anchor="middle" font-size="14.5" font-weight="bold">AcademicDebtReportGenerator</text>
+<text x="2142" y="1685" font-size="11" font-style="italic" fill="#455A64">ConcreteClass</text>
+<line x1="2140" y1="1720" x2="2440" y2="1720" stroke="#37474F" stroke-width="1.2"/>
+<line x1="2140" y1="1728" x2="2440" y2="1728" stroke="#37474F" stroke-width="1.2"/>
+<text x="2147" y="1745" font-size="12.5"># loadData(req)</text>
+<text x="2147" y="1762" font-size="12.5"># aggregate(data)</text>
+<rect x="2430" y="1810" width="308" height="97" fill="#B0BEC5" stroke="#37474F" stroke-width="1.6" rx="3"/>
+<text x="2584.0" y="1830" text-anchor="middle" font-size="14.5" font-weight="bold">StudentRecordFacade</text>
+<text x="2432" y="1805" font-size="11" font-style="italic" fill="#455A64">Facade</text>
+<line x1="2430" y1="1840" x2="2738" y2="1840" stroke="#37474F" stroke-width="1.2"/>
+<text x="2437" y="1857" font-size="12.5">- gpaService, gradeRepository,</text>
+<text x="2437" y="1874" font-size="12.5">  debtRepository, scheduleService</text>
+<line x1="2430" y1="1882" x2="2738" y2="1882" stroke="#37474F" stroke-width="1.2"/>
+<text x="2437" y="1899" font-size="12.5">+ getRecord(studentId): StudentRecordDto</text>
+</svg>

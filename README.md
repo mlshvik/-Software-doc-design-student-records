@@ -23,6 +23,8 @@
 
 - [Аналіз предметної області та вимоги](docs/01-domain-analysis.md)
 - [Use Case діаграма](docs/diagrams/use-case.png) (джерело PlantUML: [`use-case.puml`](docs/diagrams/use-case.puml))
+- [Діаграма класів, GoF-шаблони та модель даних](docs/02-class-diagram.md)
+- [ER-діаграма бази даних](docs/diagrams/er-diagram.png)
 
 ![Use Case діаграма](docs/diagrams/use-case.png)
 
@@ -40,4 +42,5 @@ cd backend
 mvn spring-boot:run
 ```
 
-Бекенд стартує на `http://localhost:8080`.
+Бекенд стартує на `http://localhost:8080`. Під час першого запуску Flyway створить схему БД
+і завантажить демонстраційні дані (облікові записи – у [`docs/02-class-diagram.md`](docs/02-class-diagram.md#демонстраційні-облікові-записи)).
