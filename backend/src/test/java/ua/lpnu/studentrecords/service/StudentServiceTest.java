@@ -7,6 +7,7 @@ import ua.lpnu.studentrecords.domain.enums.StudentStatus;
 import ua.lpnu.studentrecords.domain.exception.InvalidStatusTransitionException;
 import ua.lpnu.studentrecords.domain.exception.NotFoundException;
 import ua.lpnu.studentrecords.repository.StudentRepository;
+import ua.lpnu.studentrecords.repository.StudyGroupRepository;
 
 import java.util.Optional;
 
@@ -32,7 +33,7 @@ class StudentServiceTest {
     @BeforeEach
     void setUp() {
         repository = mock(StudentRepository.class);
-        service = new StudentService(repository);
+        service = new StudentService(repository, mock(StudyGroupRepository.class));
         student = student(1L, group(1L, "ІР-43"));
         when(repository.findById(1L)).thenReturn(Optional.of(student));
         when(repository.save(any(Student.class))).thenAnswer(invocation -> invocation.getArgument(0));

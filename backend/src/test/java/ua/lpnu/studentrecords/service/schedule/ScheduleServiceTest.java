@@ -12,6 +12,7 @@ import ua.lpnu.studentrecords.domain.enums.StudentStatus;
 import ua.lpnu.studentrecords.domain.enums.WeekType;
 import ua.lpnu.studentrecords.repository.ScheduleEntryRepository;
 import ua.lpnu.studentrecords.repository.StudentRepository;
+import ua.lpnu.studentrecords.repository.TeachingAssignmentRepository;
 
 import java.time.DayOfWeek;
 import java.util.List;
@@ -48,7 +49,8 @@ class ScheduleServiceTest {
     void setUp() {
         scheduleRepository = mock(ScheduleEntryRepository.class);
         studentRepository = mock(StudentRepository.class);
-        service = new ScheduleService(scheduleRepository, studentRepository, new ScheduleConflictChecker());
+        service = new ScheduleService(scheduleRepository, studentRepository,
+                mock(TeachingAssignmentRepository.class), new ScheduleConflictChecker());
         group = group(1L, "ІР-43");
         assignment = assignment(1L, subject(1L, "Бази даних", "5.0", ControlType.EXAM), teacher(1L, "Коваль"), group);
     }

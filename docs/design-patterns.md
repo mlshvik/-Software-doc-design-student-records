@@ -1,8 +1,9 @@
 # Реалізація шаблонів проектування (бізнес-логіка)
 
 Документ описує, як GoF-шаблони з [діаграми класів](02-class-diagram.md) реалізовано в коді бекенду
-(етап 3). Для кожного шаблону вказано проблему предметної області, учасників і тести.
-Шаблони звітів (Template Method, Factory Method, Builder) реалізуються на етапі 4.
+(етапи 3–4). Для кожного шаблону вказано проблему предметної області, учасників і тести.
+Шаблони звітів (Template Method, Factory Method, Builder) додано на етапі 4 разом із REST API
+([`04-rest-api.md`](04-rest-api.md)).
 
 Пакети: `ua.lpnu.studentrecords.pattern.*` – класи шаблонів, `ua.lpnu.studentrecords.service` – сервіси,
 які їх використовують, `ua.lpnu.studentrecords.domain.exception` – винятки бізнес-правил.
@@ -130,6 +131,56 @@ Spring впроваджує у конструктор видавця списо�
 `ScheduleConflictException` зі списком усіх знайдених конфліктів – їх покаже конструктор розкладу
 (етап 6). Тести: `ScheduleConflictCheckerTest`, `ScheduleServiceTest`.
 
+## Template Method – генератори звітів
+
+| | |
+|---|---|
+| Проблема | Три звіти (успішність груп, статистика викладачів, заборгованості) мають однаковий алгоритм: завантажити дані з фільтрами → згрупувати й порахувати → підсумки → зібрати звіт. Відрізняються лише окремі кроки. |
+| AbstractClass | `AbstractReportGenerator<D>` – `public final Report generate(ReportRequest)` |
+| Кроки (primitive operations) | `loadData(request)`, `aggregate(data, request)`, `columns()` – абстрактні |
+| Гачки (hooks) | `summarize(data, rows)` – за замовчуванням порожні підсумки; `title(request)` – назва типу + навчальний рік |
+| ConcreteClass | `GroupPerformanceReportGenerator`, `TeacherStatisticsReportGenerator`, `AcademicDebtReportGenerator` |
+| Тести | `ReportGeneratorsTest` – порядок викликів кроків, розрахунки кожного звіту, фільтри |
+
+Метод `generate` оголошено `final`, тому підклас не може змінити послідовність кроків чи забути
+зібрати звіт через Builder. Генератори – звичайні Spring-біни без `@Transactional`: CGLIB-проксі не
+перехоплює `final`-методи, тому транзакцію (лише читання) відкриває `ReportService`.
+
+```java
+public final Report generate(ReportRequest request) {
+    ReportRequest effective = request != null ? request : ReportRequest.empty();
+    D data = loadData(effective);                                   // крок 1
+    List<Map<String, Object>> rows = aggregate(data, effective);    // крок 2
+    Map<String, Object> summary = summarize(data, rows);            // гачок
+    return Report.builder(type()).title(title(effective))           // крок 3 – Builder
+            .columns(columns()).rows(rows).summary(summary).build();
+}
+```
+
+## Factory Method – вибір генератора звіту
+
+`ReportGeneratorFactory.create(ReportType)` повертає потрібний генератор як абстракцію
+`AbstractReportGenerator<?>`. Контролер і `ReportService` не знають конкретних класів: тип звіту
+приходить з URL (`/api/reports/teacher-statistics` → `ReportType.TEACHER_STATISTICS`), а фабрика
+обирає реалізацію. Конкретні генератори Spring передає у конструктор фабрики списком, фабрика
+реєструє їх у `EnumMap` за `type()` і не дозволяє двох генераторів одного типу. Новий звіт = новий
+підклас з `@Component` і нове значення `ReportType`; фабрика і клієнти не змінюються (OCP).
+Тести: `ReportGeneratorFactoryTest`.
+
+## Builder – незмінний звіт
+
+`Report` має сім частин (тип, заголовок, час, параметри, колонки, рядки, підсумки). Генератор заповнює
+їх поступово через `Report.builder(type)`, а `build()`:
+
+- перевіряє, що є заголовок і хоча б одна колонка, ключі колонок не повторюються, а рядки не містять
+  невідомих колонок;
+- робить захисні копії колекцій і повертає **незмінний** об'єкт (зміни будівельника чи вихідних мап
+  після `build()` не впливають на звіт).
+
+Тести: `ReportBuilderTest`. Діаграма послідовності всього сценарію:
+
+![Діаграма послідовності формування звіту](diagrams/sequence-report.png)
+
 ## Запуск тестів
 
 ```bash
@@ -137,6 +188,7 @@ cd backend
 mvn test
 ```
 
-Модульні тести шаблонів не потребують БД (JUnit 5 + Mockito). `ApplicationContextTest` піднімає
-контекст Spring на вбудованій H2 (профіль `test`, `src/test/resources/application-test.yml`).
+Модульні тести шаблонів не потребують БД (JUnit 5 + Mockito). `ApplicationContextTest` і
+`SecuredApiTest` піднімають контекст Spring на вбудованій H2 (профіль `test`,
+`src/test/resources/application-test.yml`).
 `DatabaseMigrationTest` виконується лише в CI на PostgreSQL (`CI_POSTGRES=true`).

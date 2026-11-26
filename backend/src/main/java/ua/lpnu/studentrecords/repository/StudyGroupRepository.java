@@ -15,4 +15,8 @@ public interface StudyGroupRepository extends JpaRepository<StudyGroup, Long> {
     List<StudyGroup> findByCourseOrderByName(Integer course);
 
     List<StudyGroup> findAllByOrderByCourseAscNameAsc();
+
+    boolean existsByNameIgnoreCase(String name);
+
+    boolean existsByNameIgnoreCaseAndIdNot(String name, Long id);
 }

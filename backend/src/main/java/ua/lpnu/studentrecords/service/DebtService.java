@@ -8,7 +8,10 @@ import ua.lpnu.studentrecords.domain.entity.TeachingAssignment;
 import ua.lpnu.studentrecords.domain.enums.DebtStatus;
 import ua.lpnu.studentrecords.domain.exception.NotFoundException;
 import ua.lpnu.studentrecords.repository.AcademicDebtRepository;
+import ua.lpnu.studentrecords.web.dto.DebtResponse;
+import ua.lpnu.studentrecords.web.mapper.AcademicMapper;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,5 +76,21 @@ public class DebtService {
     private Optional<AcademicDebt> findOpen(Student student, TeachingAssignment assignment) {
         return debtRepository.findFirstByStudentIdAndAssignmentIdAndStatus(
                 student.getId(), assignment.getId(), DebtStatus.OPEN);
+    }
+
+    /**
+     * Пошук заборгованостей для REST API. Усі фільтри необов'язкові.
+     *
+     * @param teacherId лише борги з дисциплін цього викладача (кабінет викладача)
+     */
+    public List<DebtResponse> search(DebtStatus status, Long groupId, Long studentId, Long teacherId) {
+        return debtRepository.findAllForReports().stream()
+                .filter(d -> status == null || d.getStatus() == status)
+                .filter(d -> groupId == null || groupId.equals(d.getStudent().getGroup().getId()))
+                .filter(d -> studentId == null || studentId.equals(d.getStudent().getId()))
+                .filter(d -> teacherId == null || teacherId.equals(d.getAssignment().getTeacher().getId()))
+                .sorted(Comparator.comparing(AcademicDebt::getOpenedAt).reversed())
+                .map(AcademicMapper::toResponse)
+                .toList();
     }
 }
