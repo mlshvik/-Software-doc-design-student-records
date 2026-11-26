@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1200" viewBox="0 0 1640 1200" font-family="DejaVu Sans" font-size="14">
+<defs><marker id="open" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#333" stroke-width="1.4"/></marker><marker id="tri" markerWidth="16" markerHeight="16" refX="15" refY="8" orient="auto"><path d="M1,1 L15,8 L1,15 Z" fill="white" stroke="#333" stroke-width="1.4"/></marker></defs>
+<rect width="1640" height="1200" fill="white"/>
+<rect x="300" y="60" width="1080" height="1120" rx="14" fill="#FAFAFA" stroke="#455A64" stroke-width="2"/>
+<text x="840" y="92" text-anchor="middle" font-size="19" font-weight="bold" fill="#263238">Система обліку студентів у ВНЗ</text>
+<line x1="123" y1="165" x2="363" y2="133" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="165" x2="363" y2="197" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="400" x2="367" y2="308" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="400" x2="363" y2="368" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="400" x2="363" y2="428" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="400" x2="367" y2="488" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="775" x2="373" y2="631" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="775" x2="364" y2="724" stroke="#333" stroke-width="1.4"/>
+<line x1="123" y1="775" x2="373" y2="919" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1297" y2="191" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1311" y2="277" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1324" y2="358" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1334" y2="436" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1337" y2="518" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1330" y2="601" stroke="#333" stroke-width="1.4"/>
+<line x1="1527" y1="500" x2="1279" y2="936" stroke="#333" stroke-width="1.4"/>
+<line x1="637" y1="717" x2="713" y2="693" stroke="#333" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="675" y="699" text-anchor="middle" font-size="12" fill="#5D4037" font-style="italic">«include»</text>
+<line x1="636" y1="724" x2="714" y2="766" stroke="#333" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="675" y="739" text-anchor="middle" font-size="12" fill="#5D4037" font-style="italic">«include»</text>
+<line x1="629" y1="730" x2="721" y2="840" stroke="#333" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="675" y="779" text-anchor="middle" font-size="12" fill="#5D4037" font-style="italic">«include»</text>
+<line x1="500" y1="801" x2="500" y2="749" stroke="#333" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="500" y="769" text-anchor="middle" font-size="12" fill="#5D4037" font-style="italic">«extend»</text>
+<line x1="987" y1="260" x2="1063" y2="260" stroke="#333" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1025" y="254" text-anchor="middle" font-size="12" fill="#5D4037" font-style="italic">«extend»</text>
+<line x1="1063" y1="520" x2="987" y2="520" stroke="#333" stroke-width="1.4" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1025" y="514" text-anchor="middle" font-size="12" fill="#5D4037" font-style="italic">«include»</text>
+<line x1="987" y1="960" x2="1063" y2="960" stroke="#333" stroke-width="1.4" marker-end="url(#tri)"/>
+<line x1="984" y1="1033" x2="1066" y2="967" stroke="#333" stroke-width="1.4" marker-end="url(#tri)"/>
+<line x1="975" y1="1108" x2="1075" y2="972" stroke="#333" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="65,370 30,370 30,175 63,175" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="65,745 30,745 30,175 63,175" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#tri)"/>
+<polyline points="1555,450 1555,30 95,30 95,117" fill="none" stroke="#333" stroke-width="1.4" marker-end="url(#tri)"/>
+<ellipse cx="500" cy="130" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="135" text-anchor="middle" font-size="14">Увійти в систему</text>
+<ellipse cx="500" cy="200" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="205" text-anchor="middle" font-size="13">Переглянути розклад групи</text>
+<ellipse cx="500" cy="300" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="305" text-anchor="middle" font-size="13">Переглянути свої оцінки</text>
+<ellipse cx="500" cy="365" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="370" text-anchor="middle" font-size="13">Переглянути середній бал</text>
+<ellipse cx="500" cy="430" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="435" text-anchor="middle" font-size="13">Переглянути академічні борги</text>
+<ellipse cx="500" cy="495" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="500" text-anchor="middle" font-size="14">Переглянути сповіщення</text>
+<ellipse cx="500" cy="620" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="617" text-anchor="middle" font-size="14">Переглянути свої групи</text>
+<text x="500" y="633" text-anchor="middle" font-size="14">і дисципліни</text>
+<ellipse cx="500" cy="720" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="725" text-anchor="middle" font-size="14">Виставити оцінку</text>
+<ellipse cx="500" cy="830" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="835" text-anchor="middle" font-size="13">Виставити перескладання</text>
+<ellipse cx="500" cy="930" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="500" y="927" text-anchor="middle" font-size="14">Переглянути статистику</text>
+<text x="500" y="943" text-anchor="middle" font-size="14">викладача</text>
+<ellipse cx="850" cy="690" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="687" text-anchor="middle" font-size="14">Перевірити оцінку</text>
+<text x="850" y="703" text-anchor="middle" font-size="14">(валідація)</text>
+<ellipse cx="850" cy="770" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="767" text-anchor="middle" font-size="14">Перерахувати</text>
+<text x="850" y="783" text-anchor="middle" font-size="14">середній бал</text>
+<ellipse cx="850" cy="850" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="847" text-anchor="middle" font-size="14">Відкрити / закрити</text>
+<text x="850" y="863" text-anchor="middle" font-size="14">заборгованість</text>
+<ellipse cx="1200" cy="170" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="167" text-anchor="middle" font-size="14">Керувати факультетами,</text>
+<text x="1200" y="183" text-anchor="middle" font-size="13">спеціальностями, групами</text>
+<ellipse cx="1200" cy="260" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="265" text-anchor="middle" font-size="14">Керувати студентами</text>
+<ellipse cx="1200" cy="345" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="342" text-anchor="middle" font-size="14">Керувати викладачами</text>
+<text x="1200" y="358" text-anchor="middle" font-size="14">і предметами</text>
+<ellipse cx="1200" cy="430" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="427" text-anchor="middle" font-size="14">Призначити викладача</text>
+<text x="1200" y="443" text-anchor="middle" font-size="14">на дисципліну</text>
+<ellipse cx="1200" cy="520" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="525" text-anchor="middle" font-size="14">Сформувати розклад</text>
+<ellipse cx="1200" cy="610" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="607" text-anchor="middle" font-size="14">Налаштувати систему</text>
+<text x="1200" y="623" text-anchor="middle" font-size="13">(спосіб розрахунку балу)</text>
+<ellipse cx="1200" cy="960" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="1200" y="965" text-anchor="middle" font-size="14">Сформувати звіт</text>
+<ellipse cx="850" cy="260" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="265" text-anchor="middle" font-size="13">Змінити статус студента</text>
+<ellipse cx="850" cy="520" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="517" text-anchor="middle" font-size="14">Перевірити конфлікти</text>
+<text x="850" y="533" text-anchor="middle" font-size="14">розкладу</text>
+<ellipse cx="850" cy="960" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="957" text-anchor="middle" font-size="14">Успішність за групами</text>
+<text x="850" y="973" text-anchor="middle" font-size="14">та курсами</text>
+<ellipse cx="850" cy="1040" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="1037" text-anchor="middle" font-size="14">Статистика</text>
+<text x="850" y="1053" text-anchor="middle" font-size="14">по викладачах</text>
+<ellipse cx="850" cy="1120" rx="140" ry="30" fill="#FFFDE7" stroke="#8D6E63" stroke-width="1.6"/>
+<text x="850" y="1117" text-anchor="middle" font-size="14">Звіт про</text>
+<text x="850" y="1133" text-anchor="middle" font-size="14">академічні борги</text>
+<g stroke="#222" stroke-width="2" fill="none"><circle cx="95" cy="135" r="10" fill="white"/><line x1="95" y1="145" x2="95" y2="173"/><line x1="79" y1="155" x2="111" y2="155"/><line x1="95" y1="173" x2="82" y2="195"/><line x1="95" y1="173" x2="108" y2="195"/></g>
+<text x="95" y="215" text-anchor="middle" font-weight="bold">Гість</text>
+<g stroke="#222" stroke-width="2" fill="none"><circle cx="95" cy="370" r="10" fill="white"/><line x1="95" y1="380" x2="95" y2="408"/><line x1="79" y1="390" x2="111" y2="390"/><line x1="95" y1="408" x2="82" y2="430"/><line x1="95" y1="408" x2="108" y2="430"/></g>
+<text x="95" y="450" text-anchor="middle" font-weight="bold">Студент</text>
+<g stroke="#222" stroke-width="2" fill="none"><circle cx="95" cy="745" r="10" fill="white"/><line x1="95" y1="755" x2="95" y2="783"/><line x1="79" y1="765" x2="111" y2="765"/><line x1="95" y1="783" x2="82" y2="805"/><line x1="95" y1="783" x2="108" y2="805"/></g>
+<text x="95" y="825" text-anchor="middle" font-weight="bold">Викладач</text>
+<g stroke="#222" stroke-width="2" fill="none"><circle cx="1555" cy="470" r="10" fill="white"/><line x1="1555" y1="480" x2="1555" y2="508"/><line x1="1539" y1="490" x2="1571" y2="490"/><line x1="1555" y1="508" x2="1542" y2="530"/><line x1="1555" y1="508" x2="1568" y2="530"/></g>
+<text x="1555" y="550" text-anchor="middle" font-weight="bold">Адміністратор</text>
+<text x="1555" y="567" text-anchor="middle" font-weight="bold">(деканат)</text>
+</svg>
