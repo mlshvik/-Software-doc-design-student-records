@@ -25,6 +25,8 @@
 - [Use Case діаграма](docs/diagrams/use-case.png) (джерело PlantUML: [`use-case.puml`](docs/diagrams/use-case.puml))
 - [Діаграма класів, GoF-шаблони та модель даних](docs/02-class-diagram.md)
 - [ER-діаграма бази даних](docs/diagrams/er-diagram.png)
+- [Реалізація шаблонів проектування](docs/design-patterns.md): діаграма послідовності
+  «виставлення оцінки», діаграма станів студента
 
 ![Use Case діаграма](docs/diagrams/use-case.png)
 
@@ -44,3 +46,13 @@ mvn spring-boot:run
 
 Бекенд стартує на `http://localhost:8080`. Під час першого запуску Flyway створить схему БД
 і завантажить демонстраційні дані (облікові записи – у [`docs/02-class-diagram.md`](docs/02-class-diagram.md#демонстраційні-облікові-записи)).
+
+## Тести
+
+```bash
+cd backend
+mvn test
+```
+
+Модульні тести GoF-шаблонів і сервісів (JUnit 5 + Mockito) не потребують бази даних;
+тест контексту Spring виконується на вбудованій H2 (профіль `test`).

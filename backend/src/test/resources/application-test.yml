@@ -1,0 +1,13 @@
+# Профіль для тестів, яким потрібен повний контекст Spring без PostgreSQL:
+# вбудована H2 у режимі сумісності з PostgreSQL, схема з JPA-сутностей, Flyway вимкнено.
+spring:
+  datasource:
+    url: jdbc:h2:mem:student_records;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
