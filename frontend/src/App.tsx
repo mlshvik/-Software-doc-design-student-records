@@ -7,6 +7,20 @@ import { LoginPage } from './pages/LoginPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { NotificationsPage } from './pages/NotificationsPage';
 import { AdminHome } from './pages/admin/AdminHome';
+import { DebtsPage } from './pages/admin/DebtsPage';
+import {
+  AssignmentsPage,
+  FacultiesPage,
+  GroupsPage,
+  SpecialtiesPage,
+  SubjectsPage,
+  TeachersPage,
+} from './pages/admin/ReferencePages';
+import { ReportsPage } from './pages/admin/ReportsPage';
+import { ScheduleBuilderPage } from './pages/admin/ScheduleBuilderPage';
+import { SettingsPage } from './pages/admin/SettingsPage';
+import { StudentCardPage } from './pages/admin/StudentCardPage';
+import { StudentsPage } from './pages/admin/StudentsPage';
 import { StudentDebts } from './pages/student/StudentDebts';
 import { StudentGrades } from './pages/student/StudentGrades';
 import { StudentHome } from './pages/student/StudentHome';
@@ -33,7 +47,22 @@ const ROUTES: Record<Role, RouteDef[]> = {
     { path: '/teacher/statistics', render: () => <TeacherStatistics /> },
     { path: '/notifications', render: () => <NotificationsPage /> },
   ],
-  ADMIN: [{ path: '/admin', render: () => <AdminHome /> }],
+  ADMIN: [
+    { path: '/admin', render: () => <AdminHome /> },
+    { path: '/admin/students', render: () => <StudentsPage /> },
+    { path: '/admin/students/:id', render: (p) => <StudentCardPage studentId={Number(p.id)} /> },
+    { path: '/admin/teachers', render: () => <TeachersPage /> },
+    { path: '/admin/groups', render: () => <GroupsPage /> },
+    { path: '/admin/subjects', render: () => <SubjectsPage /> },
+    { path: '/admin/assignments', render: () => <AssignmentsPage /> },
+    { path: '/admin/schedule', render: () => <ScheduleBuilderPage /> },
+    { path: '/admin/debts', render: () => <DebtsPage /> },
+    { path: '/admin/reports', render: () => <ReportsPage /> },
+    { path: '/admin/specialties', render: () => <SpecialtiesPage /> },
+    { path: '/admin/faculties', render: () => <FacultiesPage /> },
+    { path: '/admin/settings', render: () => <SettingsPage /> },
+    { path: '/notifications', render: () => <NotificationsPage /> },
+  ],
 };
 
 function Redirect({ to }: { to: string }): null {

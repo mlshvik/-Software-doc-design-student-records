@@ -26,7 +26,20 @@ export const NAVIGATION: Record<Role, NavItem[]> = {
     { to: '/teacher/statistics', label: 'Статистика', icon: '📊' },
     { to: '/notifications', label: 'Сповіщення', icon: '🔔' },
   ],
-  ADMIN: [{ to: '/admin', label: 'Огляд', icon: '🏛' }],
+  ADMIN: [
+    { to: '/admin', label: 'Огляд', icon: '🏛' },
+    { to: '/admin/students', label: 'Студенти', icon: '🎓' },
+    { to: '/admin/teachers', label: 'Викладачі', icon: '👩‍🏫' },
+    { to: '/admin/groups', label: 'Групи', icon: '👥' },
+    { to: '/admin/subjects', label: 'Дисципліни', icon: '📚' },
+    { to: '/admin/assignments', label: 'Призначення', icon: '🔗' },
+    { to: '/admin/schedule', label: 'Розклад', icon: '🗓' },
+    { to: '/admin/debts', label: 'Заборгованості', icon: '⚠' },
+    { to: '/admin/reports', label: 'Звіти', icon: '📊' },
+    { to: '/admin/specialties', label: 'Спеціальності', icon: '🏷' },
+    { to: '/admin/faculties', label: 'Факультети', icon: '🏢' },
+    { to: '/admin/settings', label: 'Налаштування', icon: '⚙' },
+  ],
 };
 
 const ROLE_TITLES: Record<Role, string> = {
