@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="830" viewBox="0 0 1500 830" font-family="DejaVu Sans">
+<defs>
+<marker id="tri" markerWidth="18" markerHeight="16" refX="17" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L17,8 L1,15 Z" fill="white" stroke="#263238" stroke-width="1.4"/></marker>
+<marker id="open" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L13,7 L1,13" fill="none" stroke="#263238" stroke-width="1.4"/></marker>
+<marker id="dia" markerWidth="22" markerHeight="14" refX="1" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,7 L11,1 L21,7 L11,13 Z" fill="#263238" stroke="#263238"/></marker>
+<marker id="odia" markerWidth="22" markerHeight="14" refX="1" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,7 L11,1 L21,7 L11,13 Z" fill="white" stroke="#263238" stroke-width="1.3"/></marker>
+<marker id="crow" markerWidth="22" markerHeight="22" refX="20" refY="11" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M4,11 L20,1 M4,11 L20,21 M4,11 L20,11" fill="none" stroke="#263238" stroke-width="1.5"/></marker>
+<marker id="one" markerWidth="20" markerHeight="20" refX="19" refY="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M12,1 L12,19 M6,1 L6,19" fill="none" stroke="#263238" stroke-width="1.4"/></marker>
+<marker id="zeroone" markerWidth="24" markerHeight="20" refX="23" refY="10" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><circle cx="8" cy="10" r="5" fill="white" stroke="#263238" stroke-width="1.3"/><path d="M18,1 L18,19" stroke="#263238" stroke-width="1.4"/></marker>
+</defs>
+<rect width="1500" height="830" fill="white"/>
+<text x="750.0" y="36" text-anchor="middle" font-size="24" font-weight="bold" fill="#263238">Архітектура і розгортання системи обліку студентів</text>
+<polygon points="40,140 52,128 352,128 340,140" fill="#ECEFF1" stroke="#37474F" stroke-width="1.4"/>
+<polygon points="340,140 352,128 352,568 340,580" fill="#CFD8DC" stroke="#37474F" stroke-width="1.4"/>
+<rect x="40" y="140" width="300" height="440" rx="0" fill="#F5F9FF" stroke="#37474F" stroke-width="1.6"/>
+<text x="190.0" y="162" text-anchor="middle" font-size="12" font-weight="normal" fill="#263238" font-style="italic">«device»</text>
+<text x="190.0" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">Комп&#x27;ютер користувача</text>
+<rect x="60" y="210" width="260" height="345" rx="6" fill="#E3F2FD" stroke="#37474F" stroke-width="1.6"/>
+<rect x="294" y="218" width="16" height="20" fill="white" stroke="#37474F"/><rect x="290" y="222" width="8" height="4" fill="white" stroke="#37474F"/><rect x="290" y="230" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="72" y="234" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">Браузер: React SPA</text>
+<text x="72" y="256" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">TypeScript, Vite</text>
+<text x="72" y="274" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F"></text>
+<text x="72" y="292" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">pages/student – кабінет студента</text>
+<text x="72" y="310" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">pages/teacher – кабінет викладача</text>
+<text x="72" y="328" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">pages/admin – адмін-панель</text>
+<text x="72" y="346" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F"></text>
+<text x="72" y="364" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">components – Layout, ScheduleGrid,</text>
+<text x="72" y="382" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">   ReportView, CrudPage, BarChart</text>
+<text x="72" y="400" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">auth/AuthContext – JWT, ролі</text>
+<text x="72" y="418" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">api/client – fetch + Problem Details</text>
+<text x="72" y="436" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">router – маршрутизація (History API)</text>
+<rect x="400" y="80" width="1060" height="725" rx="14" fill="#FAFAFA" stroke="#455A64" stroke-width="1.6" stroke-dasharray="9,5"/>
+<text x="420" y="108" text-anchor="start" font-size="15" font-weight="bold" fill="#455A64">Docker Compose (сервер)</text>
+<polygon points="430,140 442,128 742,128 730,140" fill="#ECEFF1" stroke="#37474F" stroke-width="1.4"/>
+<polygon points="730,140 742,128 742,318 730,330" fill="#CFD8DC" stroke="#37474F" stroke-width="1.4"/>
+<rect x="430" y="140" width="300" height="190" rx="0" fill="#FFF8E1" stroke="#37474F" stroke-width="1.6"/>
+<text x="580.0" y="162" text-anchor="middle" font-size="12" font-weight="normal" fill="#263238" font-style="italic">«container: nginx»</text>
+<text x="580.0" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">frontend</text>
+<rect x="450" y="205" width="260" height="110" rx="6" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/>
+<rect x="684" y="213" width="16" height="20" fill="white" stroke="#37474F"/><rect x="680" y="217" width="8" height="4" fill="white" stroke="#37474F"/><rect x="680" y="225" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="462" y="229" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">nginx 1.27</text>
+<text x="462" y="251" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">статичні файли SPA (dist)</text>
+<text x="462" y="269" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">proxy /api, /swagger-ui → backend</text>
+<text x="462" y="287" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">SPA fallback → index.html</text>
+<polygon points="430,420 442,408 742,408 730,420" fill="#ECEFF1" stroke="#37474F" stroke-width="1.4"/>
+<polygon points="730,420 742,408 742,598 730,610" fill="#CFD8DC" stroke="#37474F" stroke-width="1.4"/>
+<rect x="430" y="420" width="300" height="190" rx="0" fill="#E8F5E9" stroke="#37474F" stroke-width="1.6"/>
+<text x="580.0" y="442" text-anchor="middle" font-size="12" font-weight="normal" fill="#263238" font-style="italic">«container: PostgreSQL 16»</text>
+<text x="580.0" y="462" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">db</text>
+<rect x="450" y="485" width="260" height="110" rx="6" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/>
+<rect x="684" y="493" width="16" height="20" fill="white" stroke="#37474F"/><rect x="680" y="497" width="8" height="4" fill="white" stroke="#37474F"/><rect x="680" y="505" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="462" y="509" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">PostgreSQL</text>
+<text x="462" y="531" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">13 таблиць, FK, CHECK, індекси</text>
+<text x="462" y="549" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">міграції Flyway V1, V2</text>
+<text x="462" y="567" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">том db-data</text>
+<polygon points="800,140 812,128 1432,128 1420,140" fill="#ECEFF1" stroke="#37474F" stroke-width="1.4"/>
+<polygon points="1420,140 1432,128 1432,768 1420,780" fill="#CFD8DC" stroke="#37474F" stroke-width="1.4"/>
+<rect x="800" y="140" width="620" height="640" rx="0" fill="#F3E5F5" stroke="#37474F" stroke-width="1.6"/>
+<text x="1110.0" y="162" text-anchor="middle" font-size="12" font-weight="normal" fill="#263238" font-style="italic">«container: Spring Boot 3 / Java 17»</text>
+<text x="1110.0" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#263238">backend</text>
+<rect x="825" y="205" width="560" height="94" rx="6" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/>
+<rect x="1359" y="213" width="16" height="20" fill="white" stroke="#37474F"/><rect x="1355" y="217" width="8" height="4" fill="white" stroke="#37474F"/><rect x="1355" y="225" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="837" y="229" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">web</text>
+<text x="837" y="251" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">controller (15 REST-контролерів) · dto · mapper</text>
+<text x="837" y="269" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">GlobalExceptionHandler → RFC 7807 Problem Details</text>
+<text x="837" y="287" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">OpenAPI / Swagger UI</text>
+<rect x="825" y="325" width="560" height="76" rx="6" fill="#FFEBEE" stroke="#37474F" stroke-width="1.6"/>
+<rect x="1359" y="333" width="16" height="20" fill="white" stroke="#37474F"/><rect x="1355" y="337" width="8" height="4" fill="white" stroke="#37474F"/><rect x="1355" y="345" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="837" y="349" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">security</text>
+<text x="837" y="371" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">JwtAuthenticationFilter · JwtService · AccessGuard</text>
+<text x="837" y="389" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">ролі ADMIN / TEACHER / STUDENT, @PreAuthorize</text>
+<rect x="825" y="427" width="560" height="76" rx="6" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/>
+<rect x="1359" y="435" width="16" height="20" fill="white" stroke="#37474F"/><rect x="1355" y="439" width="8" height="4" fill="white" stroke="#37474F"/><rect x="1355" y="447" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="837" y="451" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">service</text>
+<text x="837" y="473" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">StudentService · GradeService · GpaService · DebtService</text>
+<text x="837" y="491" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">ScheduleService + ScheduleConflictChecker · ReportService …</text>
+<rect x="825" y="529" width="560" height="76" rx="6" fill="#FFF59D" stroke="#37474F" stroke-width="1.6"/>
+<rect x="1359" y="537" width="16" height="20" fill="white" stroke="#37474F"/><rect x="1355" y="541" width="8" height="4" fill="white" stroke="#37474F"/><rect x="1355" y="549" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="837" y="553" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">pattern (GoF)</text>
+<text x="837" y="575" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">Singleton · Strategy · State · Chain of Responsibility</text>
+<text x="837" y="593" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">Observer · Facade · Template Method · Factory Method · Builder</text>
+<rect x="825" y="631" width="560" height="58" rx="6" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/>
+<rect x="1359" y="639" width="16" height="20" fill="white" stroke="#37474F"/><rect x="1355" y="643" width="8" height="4" fill="white" stroke="#37474F"/><rect x="1355" y="651" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="837" y="655" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">repository</text>
+<text x="837" y="677" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">Spring Data JPA (15 репозиторіїв), Specifications</text>
+<rect x="825" y="715" width="560" height="58" rx="6" fill="#FFFFFF" stroke="#37474F" stroke-width="1.6"/>
+<rect x="1359" y="723" width="16" height="20" fill="white" stroke="#37474F"/><rect x="1355" y="727" width="8" height="4" fill="white" stroke="#37474F"/><rect x="1355" y="735" width="8" height="4" fill="white" stroke="#37474F"/>
+<text x="837" y="739" text-anchor="start" font-size="14" font-weight="bold" fill="#263238">domain</text>
+<text x="837" y="761" text-anchor="start" font-size="12.5" font-weight="normal" fill="#37474F">JPA-сутності (13) · перелічення · бізнес-винятки</text>
+<polyline points="1105.0,299 1105.0,325" fill="none" stroke="#263238" stroke-width="1.8" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<polyline points="1105.0,401 1105.0,427" fill="none" stroke="#263238" stroke-width="1.8" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<polyline points="1105.0,503 1105.0,529" fill="none" stroke="#263238" stroke-width="1.8" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<polyline points="1105.0,605 1105.0,631" fill="none" stroke="#263238" stroke-width="1.8" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<polyline points="1105.0,689 1105.0,715" fill="none" stroke="#263238" stroke-width="1.8" stroke-dasharray="7,5" marker-end="url(#open)"/>
+<text x="1379" y="795" text-anchor="end" font-size="11.5" font-weight="normal" fill="#546E7A" font-style="italic">шарова архітектура: залежності спрямовані донизу</text>
+<polyline points="320,300 430,255" fill="none" stroke="#263238" stroke-width="1.8" marker-end="url(#open)"/>
+<text x="375.0" y="267.5" text-anchor="middle" font-size="12.5" font-style="italic" fill="#37474F" paint-order="stroke" stroke="white" stroke-width="5">HTTP :3000</text>
+<polyline points="710,240 825,240" fill="none" stroke="#263238" stroke-width="1.8" marker-end="url(#open)"/>
+<text x="767" y="262" text-anchor="middle" font-size="12" font-weight="normal" fill="#37474F" font-style="italic">REST/JSON</text>
+<text x="767" y="278" text-anchor="middle" font-size="12" font-weight="normal" fill="#37474F" font-style="italic">+ JWT, :8080</text>
+<polyline points="825,660.0 765,660.0 765,540 712,540" fill="none" stroke="#263238" stroke-width="1.8" marker-end="url(#open)"/>
+<text x="767" y="532" text-anchor="start" font-size="12" font-weight="normal" fill="#37474F" font-style="italic">JDBC</text>
+<text x="767" y="548" text-anchor="start" font-size="12" font-weight="normal" fill="#37474F" font-style="italic">:5432</text>
+</svg>
