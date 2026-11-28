@@ -1,3 +1,7 @@
+# Запуск усієї системи: docker compose up --build
+#   веб-інтерфейс  – http://localhost:3000
+#   REST API       – http://localhost:8080/api   (Swagger UI: http://localhost:8080/swagger-ui.html)
+#   PostgreSQL     – localhost:5432
 services:
   db:
     image: postgres:16-alpine
@@ -15,6 +19,33 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
+  backend:
+    build: ./backend
+    container_name: student-records-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-student_records}
+      POSTGRES_USER: ${POSTGRES_USER:-student_records}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-student_records}
+      JWT_SECRET: ${JWT_SECRET:-change-me-to-a-long-random-string-at-least-32-bytes}
+      CORS_ORIGINS: http://localhost:3000,http://localhost:5173
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: student-records-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    restart: unless-stopped
 
 volumes:
   db-data:
